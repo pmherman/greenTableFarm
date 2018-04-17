@@ -1,0 +1,16 @@
+.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html {
+    height:100%;
+}
+nav {
+    background-color:rgba(15, 58, 14) !important;
+    border-radius: none !important;
+}
+
+.navbar-brand, .navbar-nav>li>a {
+    text-shadow: none;
+    color: white !important;
+}
+
+.navbar-default {
+    background-image: none !important;
+}
