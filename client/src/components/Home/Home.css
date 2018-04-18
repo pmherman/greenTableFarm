@@ -1,0 +1,8 @@
+.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html {
+    height:100%;
+}
+.carouselPicture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

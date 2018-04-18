@@ -1,0 +1,16 @@
+nav {
+    background-color:rgba(15, 58, 14) !important;
+    border-radius: none !important;
+}
+
+.navbar-brand, .navbar-nav>li>a {
+    text-shadow: none;
+    color: white !important;
+}
+
+.navbar-default {
+    background-image: none !important;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 0px;
+}
