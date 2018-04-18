@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./CustomNav.css";
 
@@ -8,12 +8,13 @@ class CustomNav extends Component {
     return (
       <Navbar className="navbar" default collapseOnSelect>
         <Navbar.Header>
-          <Navbar.Brand>
+          <Navbar.Brand className="col-lg-3">
             <Link to="/">Green Table Farm</Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
-        <Navbar.Collapse>
+        <Image className="col-lg-6" alt="Green Table Farm Logo" src="http://res.cloudinary.com/aidanclemente/image/upload/c_scale,w_350/v1524004259/Green_Table_Logo.png" />
+        <Navbar.Collapse className="col-lg-3">
           <Nav pullRight>
             <NavItem eventKey={1} componentClass={Link} href="/" to="/">
               Home

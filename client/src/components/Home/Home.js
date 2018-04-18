@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { Carousel, Image, Grid, Row } from 'react-bootstrap';
-import './Home.css'
+import './Home.css';
 
 class Home extends Component {
-
   render () {
     return(
-      <Grid>
+      <div className="carousel slide">
       <Carousel>
-        <Carousel.Item>
-          <Image alt="Kendra and Tyler" src="./assets/home.jpg" />
+        <Carousel.Item className="carousel-item">
+          <div className="view"></div>
+          <Image className="carouselPicture" alt="Kendra and Tyler" src="http://res.cloudinary.com/aidanclemente/image/upload/v1524002488/Hoyt_portrait_cropped.jpg" />
           {/* <Carousel.Caption>
             <h3>Welcome</h3>
             <p>Green Table Farm has much to offer, from hosting weddings, catering events, hosting campers, Farmer's Markets, and much more!</p>
@@ -36,7 +36,7 @@ class Home extends Component {
           <p className="Summary">Green Table Farm has much to offer, from hosting weddings, catering events, hosting campers, Farmer's Markets, and much more!</p>
         </Row>
         </Grid>
-      </Grid>
+      </div>
     )
   }
 }
