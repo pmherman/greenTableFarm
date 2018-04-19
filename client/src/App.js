@@ -6,6 +6,7 @@ import FarmFresh from "./components/Farmfresh";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
+import MapContainer from "./components/MapContainer";
 
 class App extends Component {
   render () {
@@ -17,6 +18,7 @@ class App extends Component {
               <Route exact path="/" component={ Home } />
               <Route  path="/about" component={ About } />
               <Route  path="/farmfresh" component={ FarmFresh } />
+              <Route path="/map" component={ MapContainer } />
               <Route component={NoMatch} />
             </Switch>
             <Footer />
