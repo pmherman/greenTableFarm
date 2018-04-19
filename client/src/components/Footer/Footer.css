@@ -1,0 +1,45 @@
+@font-face {
+    font-family: agilis;
+    src: url("../font/Agilis.otf");
+}
+
+#footerConnect {
+    margin-bottom: 0px;
+}
+
+.fa, #footerConnect {
+    font-size: 25px;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.icon {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+small, .fa-coffee, .fa-heart {
+    font-size: 15px;
+}
+
+.fa-heart {
+    color: red;
+}
+
+.page-footer {
+    font-family: agilis;
+    background-color:rgba(15, 58, 14);
+    padding-top: 25px;
+    color: white;
+}
+
+.icons {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.footer-copyright {
+    background-color:rgb(16, 44, 16);
+    padding: 15px 0;
+}

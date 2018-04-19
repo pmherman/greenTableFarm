@@ -5,6 +5,7 @@ import About from "./components/About";
 import FarmFresh from "./components/Farmfresh";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
+import Footer from "./components/Footer";
 import MapContainer from "./components/MapContainer";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
               <Route path="/map" component={ MapContainer } />
               <Route component={NoMatch} />
             </Switch>
+            <Footer />
           </div>
         </Router>
     )
