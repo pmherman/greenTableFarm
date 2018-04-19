@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Grid, Row } from 'react-bootstrap';
-import { relative } from 'upath';
 import "./Facebook.css";
 
 const style = {
-    width: "45vw",
-    height: "50vh"
+    width: "47vw",
+    height: "60vh",
+    position: "relative"
 }
 
 class Facebook extends Component {
     render() {
         return (
-        <iframe 
+        <iframe
+            title="Facebook Reviews"
             className = "facebook-reviews"
             style= {style}
             allowTransparency="true"

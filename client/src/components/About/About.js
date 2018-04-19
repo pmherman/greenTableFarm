@@ -23,7 +23,7 @@ class About extends Component {
           className="col-lg-6 col-sm-12" 
           style={style}
           /> 
-        <div className="col-lg-6 col-sm-12">
+        <div className="col-lg-6 col-sm-12 small">
         <Facebook />
         </div>
         </Row>
