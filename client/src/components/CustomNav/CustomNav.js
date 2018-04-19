@@ -6,15 +6,22 @@ import "./CustomNav.css";
 class CustomNav extends Component {
   render() {
     return (
-      <Navbar className="navbar" default collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand className="col-lg-3">
-            <Link to="/">Green Table Farm</Link>
+      <Navbar fluid="true" default collapseOnSelect>
+        <Navbar.Header className="aidan container-fluid" >
+
+          {/* Brand  */}
+          {/* Set to an image, but could be changed to text. Update alt and src to change picture */}
+
+          <Navbar.Brand>
+            <Link to="/"><Image className=" logo col-lg-6" alt="Green Table Farm Logo" src="http://res.cloudinary.com/aidanclemente/image/upload/c_scale,w_350/v1524004259/Green_Table_Logo.png" /></Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
-        <Image className="col-lg-6" alt="Green Table Farm Logo" src="http://res.cloudinary.com/aidanclemente/image/upload/c_scale,w_350/v1524004259/Green_Table_Logo.png" />
-        <Navbar.Collapse className="col-lg-3">
+
+        {/* To add content in the center of Navbar, add content here */}
+
+        {/* Links on right hand side of navbar, to add more, copy NavItem and update eventKey, href and to */}
+        <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} componentClass={Link} href="/" to="/">
               Home
@@ -31,74 +38,5 @@ class CustomNav extends Component {
     )
   }
 }
-  // ------------------------------------------------------------------------------
-  // <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-  //   <div className="container">
-
-  //     {/* Brand  */}
-  //     <a className="navbar-brand js-scroll-trigger waves-effect waves-light" href="/">
-  //       <strong>Green Table Farm</strong>
-  //     </a>
-
-  //     {/* Collapse  */}
-  //     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-  //       aria-expanded="false" aria-label="Toggle navigation">
-  //       <span className="navbar-toggler-icon"></span>
-  //     </button>
-
-  //     {/* Links  */}
-  //     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-
-  //       {/* Left  */}
-  //       <ul className="navbar-nav mr-auto">
-  //         <li className="nav-item">
-  //           <a className="nav-link js-scroll-trigger" href="#page-top">Home</a>
-  //         </li>
-  //         <li className="nav-item">
-  //           <a className="nav-link js-scroll-trigger" href="#about">About</a>
-  //         </li>
-  //         <li className="nav-item">
-  //           <a className="nav-link js-scroll-trigger" href="#farmFresh">Farm Fresh</a>          
-  //         </li>
-  //         <li className="nav-item">
-  //           <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>              
-  //         </li>
-  //       </ul>
-
-  //       {/* Right  */}
-  //       <ul className="navbar-nav nav-flex-icons">
-  //         <li className="nav-item">
-  //           <a href="https://www.facebook.com/greentablefarm/" className="nav-link" target="_blank">
-  //             <i className="fa fa-facebook"></i>
-  //           </a>
-  //         </li>
-  //         <li className="nav-item">
-  //           <a href="https://github.com/mdbootstrap/bootstrap-material-design" className="nav-link rounded waves-effect waves-light"
-  //             target="_blank">
-  //             <i className="fa fa-github mr-2"></i>
-  //           </a>
-  //         </li>
-  //       </ul>
-
-  //     </div>
-
-  //   </div>
-  // </nav>
-  // ---------------------------------------------------------------
-  // <nav className="navbar navbar-inverse navbar-top">
-  //   <div className="container-fluid">
-  //     <div className="navbar-header">
-  //       <button type="button" className="collapsed navbar-toggle">
-  //         <span className="sr-only">Toggle navigation</span>
-  //         <span className="icon-bar" /> <span className="icon-bar" />
-  //         <span className="icon-bar" />
-  //       </button>
-  //       <a href="/" className="navbar-brand">
-  //         React Reading List
-  //       </a>
-  //     </div>
-  //   </div>
-  // </nav>
-// );
 
 export default CustomNav;
