@@ -8,12 +8,11 @@ nav {
     border-radius: none !important;
 }
 
-/* at width: 516px add a media query for navbar-brand for width: 68vw */
-
 .navbar-brand, .navbar-nav>li>a {
     text-shadow: none;
     color: white !important;
     height: 100%;
+    padding-left: 0px;
     font-family: agilis;
 }
 
@@ -33,3 +32,12 @@ nav {
 .logo {
     width: 70%;
 }
+
+
+/* at width: 516px add a media query for navbar-brand for width: 68vw */
+
+/* @media screen and (max-width: 930px) {
+    .navbar-brand {
+      width: 68vw  
+    }  
+} */
