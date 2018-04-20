@@ -7,7 +7,7 @@ class CustomNav extends Component {
   render() {
     return (
       <Navbar fluid="true" default collapseOnSelect>
-        <Navbar.Header className="aidan container-fluid" >
+        <Navbar.Header className="container-fluid" >
 
           {/* Brand  */}
           {/* Set to an image, but could be changed to text. Update alt and src to change picture */}
@@ -31,6 +31,9 @@ class CustomNav extends Component {
             </NavItem>
             <NavItem eventKey={3} componentClass={Link} href="/farmfresh" to="/farmfresh">
               Farm Fresh
+            </NavItem>
+            <NavItem eventKey={4} componentClass={Link} href="/contact" to="/contact">
+              Contact Us
             </NavItem>
           </Nav>
         </Navbar.Collapse>

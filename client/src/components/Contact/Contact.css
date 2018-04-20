@@ -1,0 +1,24 @@
+@font-face {
+    font-family: agilis;
+    src: url("../font/Agilis.otf");
+}
+
+#contact {
+    font-family: agilis; 
+    margin-bottom: -80px;
+    color: rgba(15, 58, 14);
+}
+
+.push {
+    height: 110px;
+}
+
+.form-control {
+    font-family: agilis; 
+    color: rgba(15, 58, 14);
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    box-shadow: none;
+}
