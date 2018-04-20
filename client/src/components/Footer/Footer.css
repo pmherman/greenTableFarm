@@ -28,9 +28,12 @@ small, .fa-coffee, .fa-heart {
 }
 
 .page-footer {
+    /* position: fixed;
+    bottom: 0px;
+    width: 100vw; */
     font-family: agilis;
     background-color:rgba(15, 58, 14);
-    padding-top: 25px;
+    padding-top: 10px;
     color: white;
 }
 
@@ -42,4 +45,5 @@ small, .fa-coffee, .fa-heart {
 .footer-copyright {
     background-color:rgb(16, 44, 16);
     padding: 15px 0;
+    letter-spacing: 1px;
 }

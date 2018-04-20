@@ -27,7 +27,7 @@ import "./Footer.css";
       </a>
 
       {/*  Email Update href */}
-      <a href="mailto:tjhoyt7@gmail.com" class="social-link rounded-circle text-white mr-3" target="_blank" data-toggle="tooltip" data-placement="top" title="Email" data-original-title="Email">
+      <a href="mailto:tjhoyt7@gmail.com" class="social-link rounded-circle text-white mr-3" data-toggle="tooltip" data-placement="top" title="Email" data-original-title="Email">
         <i class="icon fa fa-fw fa-envelope"></i>
       </a>
 

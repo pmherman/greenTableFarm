@@ -20,7 +20,7 @@ class About extends Component {
        </Row>
        <Row>
         <MapContainer 
-          className="col-lg-6" 
+          className="col-lg-5" 
           style={style}
           />
         <div className="col-lg-6">
