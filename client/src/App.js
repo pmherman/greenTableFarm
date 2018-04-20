@@ -6,11 +6,8 @@ import FarmFresh from "./components/Farmfresh";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
-<<<<<<< HEAD
 import Contact from "./components/Contact";
-=======
 import MapContainer from "./components/MapContainer";
->>>>>>> master
 
 class App extends Component {
   render () {
