@@ -4,8 +4,8 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import { relative } from 'upath';
 
 const style = {
-    width: "800px",
-    height: "500px",
+    width: "47vw",
+    height: "60vh",
     position: relative
   }
 
