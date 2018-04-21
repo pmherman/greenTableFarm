@@ -11,7 +11,6 @@ export default class Farmfresh extends Component {
     description: ""
   };
   componentDidMount() {
-    console.log("Test Console log");
     this.loadThumbnails();
   }
 
@@ -56,14 +55,12 @@ export default class Farmfresh extends Component {
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
-                  <ListGroupItem key={thumbnail._id}>
-                      <Col xs={6} md={4}>
-                        <Thumbnail src={this.state.thumbnails.photo} alt="242x200">
-                          <h3>{this.state.thumbnails.title}</h3>
-                          <p>{this.state.thumbnails.description}</p>
+                      <Col xs={6} md={4} key={thumbnail._id}>
+                      <Thumbnail src={thumbnail.photo} alt="242x200">
+                          <h3>{thumbnail.title}</h3>
+                          <p>{thumbnail.description}</p>
                         </Thumbnail>
                       </Col>
-                  </ListGroupItem>
                 ))}
               </ListGroup>
             ) : (
