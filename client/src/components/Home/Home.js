@@ -13,7 +13,7 @@ class Home extends Component {
         <Carousel.Item className="carousel-item">
           <div className="view"></div>
 
-          {/* Update alt and src, carousel caption will overlay on top of the pictures */}
+          {/* Update alt and src, carousel caption (optional) will overlay on top of the pictures */}
 
           {/* First Slide */}
           <Image className="carouselPicture" alt="Kendra and Tyler" src="http://res.cloudinary.com/aidanclemente/image/upload/v1524002488/Hoyt_portrait_cropped.jpg" />
@@ -44,14 +44,14 @@ class Home extends Component {
           {/* Add more slides here, copy and paste a previous slide, then update the information */}
 
       </Carousel>
-        <Grid>
-          <Row>
+        {/* <Grid> */}
+          {/* <Row> */}
 
             {/* Optional Summary below the slides */}
 
             {/* <p className="summary">Green Table Farm has much to offer, from hosting weddings, catering events, hosting campers, Farmer's Markets, and much more!</p> */}
-          </Row>
-        </Grid>
+          {/* </Row> */}
+        {/* </Grid> */}
       </div>
     )
   }

@@ -2,6 +2,10 @@
     padding: 25px;
 }
 
+h1, h2, .thumbnail, button {
+    font-family: agilis;
+}
+
 .thumbnail {
     height: 400px;
 }
