@@ -10,7 +10,7 @@
 }
 
 .push {
-    height: 110px;
+    height: 167px;
 }
 
 .form-control {
@@ -21,4 +21,9 @@
     border-bottom: 1px solid #ccc;
     border-radius: 0px;
     box-shadow: none;
+}
+
+#submitForm {
+    background-color:  rgba(15, 58, 14);
+    color: white;
 }
