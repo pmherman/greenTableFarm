@@ -5,3 +5,11 @@
 .thumbnail {
     height: 400px;
 }
+
+#editButton {
+    display: none;
+}
+
+#submitButton {
+    display: inline;
+}

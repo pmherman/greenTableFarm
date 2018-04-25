@@ -9,9 +9,11 @@ import UpdateBtn from "../../components/UpdateBtn";
 export default class AdminView extends Component {
   state = {
     thumbnails: [],
+    id: "",
     photo: "",
     title: "",
-    description: ""
+    description: "",
+    price: "",
   };
   componentDidMount() {
     this.loadThumbnails();
@@ -32,11 +34,21 @@ export default class AdminView extends Component {
       .catch(err => console.log(err));
   };
 
-  updateThumbnail = id => {
-    API.updateThumbnail(id)
-      .then(res => this.loadThumbnails())
-      .catch(err => console.log(err));
-  };
+  updateForm = id => {
+    document.getElementById("submitButton").style.display = "none";
+    document.getElementById("editButton").style.display="inline";
+    API.getThumbnail(id)
+    .then(res => {
+      console.log("ID: " + res.data._id);
+      this.setState({
+        id: res.data._id,
+        photo: res.data.photo,
+        title: res.data.title,
+        description: res.data.description,
+        price: res.data.price
+      })
+    })
+  }
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -45,13 +57,38 @@ export default class AdminView extends Component {
     });
   };
 
+  handleUpdate = event => {
+    event.preventDefault();
+    document.getElementById("editButton").style.display="none";
+    document.getElementById("submitButton").style.display = "inline";
+    API.updateThumbnail(this.state.id, {
+      photo: this.state.photo,
+      title: this.state.title,
+      description: this.state.description,
+      price: this.state.price
+    })
+    .then(res => {
+        this.setState({
+        id: res.data._id,
+        photo: res.data.photo,
+        title: res.data.title,
+        description: res.data.description,
+        price: res.data.price
+      });
+      this.loadThumbnails();
+      console.log("Updated Photo: " + res.data.photo);
+    })
+    .catch(err => console.log(err)); 
+  }
+
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.photo && this.state.description) {
+    if (this.state.title && this.state.photo && this.state.description && this.state.price) {
       API.saveThumbnail({
         photo: this.state.photo,
         title: this.state.title,
-        description: this.state.description
+        description: this.state.description,
+        price: this.state.price
       })
         .then(res => this.loadThumbnails())
         .catch(err => console.log(err));
@@ -63,6 +100,12 @@ export default class AdminView extends Component {
         <Col md={6}>
           <h1>Entry Form</h1>
           <form>
+            <Input 
+              type="hidden"
+              value={this.state.id}
+              onChange={this.handleInputChange}
+              name="id"
+            />
             <Input
               value={this.state.title}
               onChange={this.handleInputChange}
@@ -76,6 +119,13 @@ export default class AdminView extends Component {
               name="photo"
               placeholder="Link to Photo (http://www.google.com)"
             />
+            <Input
+              value={this.state.price}
+              onChange={this.handleInputChange}
+              type="text"
+              name="price"
+              placeholder="Price: $4.99"
+            />
             <TextArea
               value={this.state.description}
               onChange={this.handleInputChange}
@@ -83,7 +133,17 @@ export default class AdminView extends Component {
               placeholder="Description of products being sold"
             />
             <FormBtn
-              disabled={!(this.state.photo && this.state.title && this.state.description)}
+              id="editButton"
+              className="btn btn-warning"
+              disabled={!(this.state.photo && this.state.title && this.state.description && this.state.price)}
+              onClick={this.handleUpdate}
+            >
+              Update Item
+            </FormBtn>
+            <FormBtn
+              id="submitButton"
+              className="btn btn-success"
+              disabled={!(this.state.photo && this.state.title && this.state.description && this.state.price)}
               onClick={this.handleFormSubmit}
             >
               Submit Item
@@ -99,7 +159,8 @@ export default class AdminView extends Component {
                       <Thumbnail src={thumbnail.photo} alt="242x200">
                           <h3>{thumbnail.title}</h3>
                           <p>{thumbnail.description}</p>
-                          <UpdateBtn onClick={() => this.updateThumbnail(thumbnail._id)} />
+                          <p>Price: {thumbnail.price}</p>
+                          <UpdateBtn onClick={() => (this.updateForm(thumbnail._id))}/>
                           <DeleteBtn onClick={() => this.deleteThumbnail(thumbnail._id)} />
                         </Thumbnail>
                       </Col>
