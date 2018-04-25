@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import FarmFresh from "./components/Farmfresh";
+import AdminView from "./components/AdminView";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
 import Cafe from "./components/Cafe";
 import Contact from "./components/Contact";
-import MapContainer from "./components/MapContainer";
 
 class App extends Component {
   render () {
@@ -21,6 +21,7 @@ class App extends Component {
               <Route  path="/about" component={ About } />
               <Route path="/cafe" component={ Cafe } />
               <Route  path="/farmfresh" component={ FarmFresh } />
+              <Route path="/adminview" component={ AdminView } />
               <Route path="/contact" component={ Contact } />
               <Route component={NoMatch} />
             </Switch>

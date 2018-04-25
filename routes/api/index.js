@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const cardRoutes = require("./cards");
+const thumbnailRoutes = require("./thumbnail");
 
-// Card routes
-router.use("/cards", cardRoutes);
+// Thumbnail routes
+router.use("/thumbnail", thumbnailRoutes);
 
 module.exports = router;

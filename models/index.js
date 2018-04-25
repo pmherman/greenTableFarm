@@ -1,3 +1,3 @@
 module.exports = {
-  Card: require("./card")
+  Thumbnail: require("./thumbnail")
 };
