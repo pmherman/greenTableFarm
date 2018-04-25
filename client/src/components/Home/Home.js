@@ -44,14 +44,14 @@ class Home extends Component {
           {/* Add more slides here, copy and paste a previous slide, then update the information */}
 
       </Carousel>
-        <Grid>
-          <Row>
+        {/* <Grid> */}
+          {/* <Row> */}
 
             {/* Optional Summary below the slides */}
 
             {/* <p className="summary">Green Table Farm has much to offer, from hosting weddings, catering events, hosting campers, Farmer's Markets, and much more!</p> */}
-          </Row>
-        </Grid>
+          {/* </Row> */}
+        {/* </Grid> */}
       </div>
     )
   }
