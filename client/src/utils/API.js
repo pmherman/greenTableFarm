@@ -16,5 +16,12 @@ export default {
   // Saves a thumbnail to the database
   saveThumbnail: function(thumbnailData) {
     return axios.post("/api/thumbnail", thumbnailData);
+  },
+  // Update a thumbnail to the database
+  updateThumbnail: function(id, thumbnailData) {
+    console.log("--------------------");
+    console.log(thumbnailData);
+    console.log("--------------------");
+    return axios.put("/api/thumbnail/" + id, thumbnailData)
   }
 };
