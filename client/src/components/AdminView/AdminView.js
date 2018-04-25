@@ -23,7 +23,7 @@ export default class AdminView extends Component {
     API.getThumbnails()
       .then(res => {
         console.log("Response:" + res);
-        this.setState({ thumbnails: res.data, photo: "", title: "", description: "" })
+        this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
       })
       .catch(err => console.log(err));
   };
@@ -39,7 +39,6 @@ export default class AdminView extends Component {
     document.getElementById("editButton").style.display="inline";
     API.getThumbnail(id)
     .then(res => {
-      console.log("ID: " + res.data._id);
       this.setState({
         id: res.data._id,
         photo: res.data.photo,
