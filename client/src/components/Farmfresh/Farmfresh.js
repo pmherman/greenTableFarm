@@ -57,8 +57,9 @@ export default class Farmfresh extends Component {
                 {this.state.thumbnails.map(thumbnail => (
                       <Col xs={6} md={4} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">
-                          <h3>{thumbnail.title}</h3>
-                          <p>{thumbnail.description}</p>
+                          <h3 className="text-center">{thumbnail.title}</h3>
+                          <p className="text-center">{thumbnail.description}</p>
+                          <p className="text-center" id="price">Price: {thumbnail.price}</p>
                         </Thumbnail>
                       </Col>
                 ))}

@@ -156,7 +156,7 @@ export default class AdminView extends Component {
                 {this.state.thumbnails.map(thumbnail => (
                       <Col xs={6} md={4} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">
-                          <h3>{thumbnail.title}</h3>
+                          <h5>{thumbnail.title}</h5>
                           <p>{thumbnail.description}</p>
                           <p>Price: {thumbnail.price}</p>
                           <UpdateBtn onClick={() => (this.updateForm(thumbnail._id))}/>
