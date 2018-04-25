@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
-import "./AdminView.css";
+import "./AdminViewCafe.css";
 import API from "../../utils/API";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
-export default class AdminView extends Component {
+export default class AdminViewCafe extends Component {
   state = {
     thumbnails: [],
     id: "",
@@ -156,7 +156,7 @@ export default class AdminView extends Component {
           </form>
         </Col>
         <Col md={6}>
-          <h1>Admin View</h1>
+          <h1>Admin View - Café</h1>
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (

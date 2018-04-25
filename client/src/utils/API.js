@@ -19,9 +19,6 @@ export default {
   },
   // Update a thumbnail to the database
   updateThumbnail: function(id, thumbnailData) {
-    console.log("--------------------");
-    console.log(thumbnailData);
-    console.log("--------------------");
     return axios.put("/api/thumbnail/" + id, thumbnailData)
   }
 };

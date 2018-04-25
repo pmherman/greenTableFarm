@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import FarmFresh from "./components/Farmfresh";
 import AdminView from "./components/AdminView";
+import AdminViewCafe from "./components/AdminViewCafe";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ class App extends Component {
               <Route path="/about" component={ About } />
               <Route path="/farmfresh" component={ FarmFresh } />
               <Route path="/adminview" component={ AdminView } />
+              <Route path="/adminviewcafe" component={ AdminViewCafe } />
               <Route path="/contact" component={ Contact } />
               <Route component={NoMatch} />
             </Switch>
