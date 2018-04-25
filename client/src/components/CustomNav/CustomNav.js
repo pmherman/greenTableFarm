@@ -20,7 +20,7 @@ class CustomNav extends Component {
 
         {/* To add content in the center of Navbar, add content here */}
 
-        {/* Links on right hand side of navbar, to add more, copy NavItem and update eventKey, href and to */}
+        {/* Links on right hand side of navbar, to add more, copy NavItem and update text eventKey, href and to */}
         <Navbar.Collapse>
           <Nav className="col-sm-6" pullRight>
 
@@ -33,7 +33,7 @@ class CustomNav extends Component {
             </NavItem>
            
             <NavItem eventKey={3} componentClass={Link} href="/cafe" to="/cafe">
-              Cafe
+              Café
             </NavItem>
 
              <NavItem eventKey={4} componentClass={Link} href="/farmfresh" to="/farmfresh">

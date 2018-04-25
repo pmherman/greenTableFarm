@@ -13,7 +13,7 @@ class Home extends Component {
         <Carousel.Item className="carousel-item">
           <div className="view"></div>
 
-          {/* Update alt and src, carousel caption will overlay on top of the pictures */}
+          {/* Update alt and src, carousel caption (optional) will overlay on top of the pictures */}
 
           {/* First Slide */}
           <Image className="carouselPicture" alt="Kendra and Tyler" src="http://res.cloudinary.com/aidanclemente/image/upload/v1524002488/Hoyt_portrait_cropped.jpg" />
