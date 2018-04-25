@@ -5,3 +5,8 @@
 .thumbnail {
     height: 400px;
 }
+
+#price {
+    color: darkgreen;
+    font-weight: bold;
+}

@@ -23,7 +23,7 @@ export default class AdminView extends Component {
     API.getThumbnails()
       .then(res => {
         console.log("Response:" + res);
-        this.setState({ thumbnails: res.data, photo: "", title: "", description: "" })
+        this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
       })
       .catch(err => console.log(err));
   };
@@ -39,7 +39,6 @@ export default class AdminView extends Component {
     document.getElementById("editButton").style.display="inline";
     API.getThumbnail(id)
     .then(res => {
-      console.log("ID: " + res.data._id);
       this.setState({
         id: res.data._id,
         photo: res.data.photo,
@@ -157,7 +156,7 @@ export default class AdminView extends Component {
                 {this.state.thumbnails.map(thumbnail => (
                       <Col xs={6} md={4} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">
-                          <h3>{thumbnail.title}</h3>
+                          <h5>{thumbnail.title}</h5>
                           <p>{thumbnail.description}</p>
                           <p>Price: {thumbnail.price}</p>
                           <UpdateBtn onClick={() => (this.updateForm(thumbnail._id))}/>
