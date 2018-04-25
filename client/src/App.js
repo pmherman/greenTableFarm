@@ -8,6 +8,7 @@ import AdminViewCafe from "./components/AdminViewCafe";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
+import Cafe from "./components/Cafe";
 import Contact from "./components/Contact";
 
 class App extends Component {
@@ -18,8 +19,9 @@ class App extends Component {
             <Nav />
             <Switch>
               <Route exact path="/" component={ Home } />
-              <Route path="/about" component={ About } />
-              <Route path="/farmfresh" component={ FarmFresh } />
+              <Route  path="/about" component={ About } />
+              <Route path="/cafe" component={ Cafe } />
+              <Route  path="/farmfresh" component={ FarmFresh } />
               <Route path="/adminview" component={ AdminView } />
               <Route path="/adminviewcafe" component={ AdminViewCafe } />
               <Route path="/contact" component={ Contact } />

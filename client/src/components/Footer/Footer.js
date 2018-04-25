@@ -20,6 +20,9 @@ import "./Footer.css";
     
     {/* Social icons   */}
     <div class="icons">
+
+    {/* Like on Facebook */}
+    {/* <div class="fb-like" data-href="https://www.facebook.com/greentablefarm/" data-width="50px" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div> */}
     
       {/* Facebook Update href */}
       <a href="https://www.facebook.com/greentablefarm/" target="_blank">
