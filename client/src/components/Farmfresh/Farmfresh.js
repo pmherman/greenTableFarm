@@ -23,34 +23,10 @@ export default class Farmfresh extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteThumbnail = id => {
-    API.deleteThumbnail(id)
-      .then(res => this.loadThumbnails())
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveThumbnail({
-        photo: this.state.photo,
-        title: this.state.title,
-        description: this.state.description
-      })
-        .then(res => this.loadThumbnails())
-        .catch(err => console.log(err));
-    }
-  };
   render() {
     return (
       <Grid>
+        <h1>Farm Fresh Products</h1>
         <Row>
           {this.state.thumbnails.length ? (
               <ListGroup>

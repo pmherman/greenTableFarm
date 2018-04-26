@@ -41,6 +41,16 @@ const thumbnailSeed = [
   }
 ];
 
+const cafeSeed = [
+  {
+    photo : "https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-exlarge-169.jpg",
+    title : "Black Coffee",
+    description : "A custom made coffee blend",
+    price : "$1.49",
+    date: new Date(Date.now())
+  }
+];
+
 db.Thumbnail
   .remove({})
   .then(() => db.Thumbnail.collection.insertMany(thumbnailSeed))
@@ -52,3 +62,15 @@ db.Thumbnail
     console.error(err);
     process.exit(1);
   });
+
+  db.Cafe
+    .remove({})
+    .then(() => db.Cafe.collection.insertMany(cafeSeed))
+    .then(data => {
+      console.log(data.insertedIds.length + " records inserted!");
+      process.exit(0)
+    })
+    .catch(err => {
+      console.long(err);
+      process.exit(1);
+    });

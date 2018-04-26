@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/8.4.0/bin/node /usr/local/bin/yarn seedf
+  /usr/local/Cellar/node/8.4.0/bin/node /usr/local/bin/yarn staryt
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -2299,7 +2299,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
 Trace: 
-  Error: Command "seedf" not found. Did you mean "seed"?
+  Error: Command "staryt" not found. Did you mean "start"?
       at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
       at /usr/local/lib/node_modules/yarn/lib/cli.js:87307:17
       at Generator.next (<anonymous>)
