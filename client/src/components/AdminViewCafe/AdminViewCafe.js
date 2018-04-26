@@ -16,11 +16,11 @@ export default class AdminViewCafe extends Component {
     price: "",
   };
   componentDidMount() {
-    this.loadThumbnails();
+    this.loadCafes();
   }
 
-  loadThumbnails = () => {
-    API.getThumbnails()
+  loadCafes = () => {
+    API.getCafes()
       .then(res => {
         console.log("Response:" + res);
         this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
@@ -28,9 +28,9 @@ export default class AdminViewCafe extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteThumbnail = id => {
-    API.deleteThumbnail(id)
-      .then(res => this.loadThumbnails())
+  deleteCafe = id => {
+    API.deleteCafe(id)
+      .then(res => this.loadCafes())
       .catch(err => console.log(err));
   };
 
@@ -60,7 +60,7 @@ export default class AdminViewCafe extends Component {
     event.preventDefault();
     document.getElementById("editButton").style.display="none";
     document.getElementById("submitButton").style.display = "inline";
-    API.updateThumbnail(this.state.id, {
+    API.updateCafe(this.state.id, {
       photo: this.state.photo,
       title: this.state.title,
       description: this.state.description,
@@ -74,8 +74,7 @@ export default class AdminViewCafe extends Component {
         description: res.data.description,
         price: res.data.price
       });
-      this.loadThumbnails();
-      console.log("Updated Photo: " + res.data.photo);
+      this.loadCafes();
     })
     .catch(err => console.log(err)); 
   }
@@ -83,13 +82,13 @@ export default class AdminViewCafe extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.photo && this.state.description && this.state.price) {
-      API.saveThumbnail({
+      API.saveCafe({
         photo: this.state.photo,
         title: this.state.title,
         description: this.state.description,
         price: this.state.price
       })
-        .then(res => this.loadThumbnails())
+        .then(res => this.loadCafes())
         .catch(err => console.log(err));
     }
   };
@@ -166,7 +165,7 @@ export default class AdminViewCafe extends Component {
                           <p>{thumbnail.description}</p>
                           <p>Price: {thumbnail.price}</p>
                           <UpdateBtn onClick={() => (this.updateForm(thumbnail._id))}/>
-                          <DeleteBtn onClick={() => this.deleteThumbnail(thumbnail._id)} />
+                          <DeleteBtn onClick={() => this.deleteCafe(thumbnail._id)} />
                         </Thumbnail>
                       </Col>
                 ))}

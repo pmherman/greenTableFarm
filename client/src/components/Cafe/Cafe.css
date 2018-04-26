@@ -2,3 +2,16 @@
     font-family: agilis;
     src: url("../font/Agilis.otf");
 }
+
+.coverPhoto {
+    width: 400px;
+    margin: auto;
+    display: block;
+    border: 25px solid transparent;
+    padding: 5px;
+    border-image: url("../img/border1.png") 100 stretch;
+}
+
+.thumbnail>img {
+    max-height: 50%;
+}
