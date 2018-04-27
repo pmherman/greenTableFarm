@@ -48,6 +48,27 @@ const cafeSeed = [
     description : "A custom made coffee blend",
     price : "$1.49",
     date: new Date(Date.now())
+  },
+  {
+    photo: "/assets/cookie.jpg",
+    title: "Assorted Cookies",
+    description: "homemade cookies",
+    price: "$6.99 per pound",
+    date: new Date(Date.now())
+  },
+  {
+    photo: "/assets/pie.jpg",
+    title: "Cherry Pie",
+    description: "Home made pie",
+    price: "$19.99",
+    date: new Date(Date.now())
+  },
+  {
+    photo: "/assets/candy.jpg",
+    title: "Chocolate Candy",
+    description: "assorted candy",
+    price: "$6.99 per pound",
+    date: new Date(Date.now())
   }
 ];
 
