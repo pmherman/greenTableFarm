@@ -50,7 +50,7 @@ const cafeSeed = [
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/cookies.jpg",
+    photo: "/assets/cookie.jpg",
     title: "Assorted Cookies",
     description: "homemade cookies",
     price: "$6.99 per pound",
