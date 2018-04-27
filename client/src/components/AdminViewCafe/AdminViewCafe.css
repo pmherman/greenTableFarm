@@ -6,6 +6,9 @@
     height: 400px;
 }
 
+.heading {
+ text-decoration: underline;
+}
 .select {
     width: 7em;
     position: relative;

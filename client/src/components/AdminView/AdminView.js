@@ -103,7 +103,7 @@ export default class AdminView extends Component {
         <Button className="select" href="/adminviewcafe">
           Café
         </Button>
-          <h1>Entry Form</h1>
+          <h1 className="heading">Entry Form</h1>
           <form>
             <Input 
               type="hidden"
@@ -156,7 +156,7 @@ export default class AdminView extends Component {
           </form>
         </Col>
         <Col md={6}>
-          <h1>Admin View</h1>
+          <h1 className="heading">Admin View - Fresh Farm</h1>
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (

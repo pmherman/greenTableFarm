@@ -37,7 +37,7 @@ export default class AdminViewCafe extends Component {
   updateForm = id => {
     document.getElementById("submitButton").style.display = "none";
     document.getElementById("editButton").style.display="inline";
-    API.getThumbnail(id)
+    API.getCafe(id)
     .then(res => {
       this.setState({
         id: res.data._id,
@@ -102,7 +102,7 @@ export default class AdminViewCafe extends Component {
         <Button className="select" href="/adminviewcafe">
           Café
         </Button>
-          <h1>Entry Form</h1>
+          <h1 className="heading">Entry Form</h1>
           <form>
             <Input 
               type="hidden"
@@ -155,7 +155,7 @@ export default class AdminViewCafe extends Component {
           </form>
         </Col>
         <Col md={6}>
-          <h1>Admin View - Café</h1>
+          <h1 className="heading">Admin View - Café</h1>
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
