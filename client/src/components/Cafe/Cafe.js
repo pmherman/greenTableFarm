@@ -27,7 +27,7 @@ class Cafe extends Component {
     return (
       <Grid>
         <h1 className="text-center">Enjoy our Café Services</h1>
-        <img className="coverPhoto text-center" src="/assets/coverPhoto.jpg" alt="Cover Photo" />
+        <img className="coverPhoto text-center" src="/assets/images/coverPhoto.jpg" alt="Cover Photo" />
         <Row>
           {this.state.cafes.length ? (
               <ListGroup>
@@ -46,6 +46,7 @@ class Cafe extends Component {
               <h3>No Results to Display</h3>
             )}
         </Row>
+        <div className="push"></div>
       </Grid>
     )
   }

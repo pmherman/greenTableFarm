@@ -102,6 +102,9 @@ export default class AdminViewCafe extends Component {
         <Button className="select" href="/adminviewcafe">
           Café
         </Button>
+        <Button className="select" href="/adminviewlogin">
+          Manage users
+        </Button>
           <h1 className="heading">Entry Form</h1>
           <form>
             <Input 
@@ -174,6 +177,7 @@ export default class AdminViewCafe extends Component {
               <h3>No Results to Display</h3>
             )}
         </Col>
+        <div className="push"></div>
       </Grid>
     )
   }

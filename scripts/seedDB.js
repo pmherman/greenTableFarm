@@ -44,30 +44,57 @@ const thumbnailSeed = [
 const cafeSeed = [
   {
     photo : "https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-exlarge-169.jpg",
-    title : "Black Coffee",
+    title : "Organic Coffee",
     description : "A custom made coffee blend",
     price : "$1.49",
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/cookie.jpg",
+    photo: "/assets/images/cookie.jpg",
     title: "Assorted Cookies",
     description: "homemade cookies",
     price: "$6.99 per pound",
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/pie.jpg",
+    photo: "/assets/images/pie.jpg",
     title: "Cherry Pie",
     description: "Home made pie",
     price: "$19.99",
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/candy.jpg",
+    photo: "/assets/images/candy.jpg",
     title: "Chocolate Candy",
     description: "assorted candy",
     price: "$6.99 per pound",
+    date: new Date(Date.now())
+  }
+];
+
+const userSeed = [
+  {
+    photo: "https://media.istockphoto.com/photos/portrait-of-a-happy-young-man-smiling-on-gray-background-picture-id185815404?k=6&m=185815404&s=612x612&w=0&h=5ETUJgJITLROE4zemjbusUCFR7LHgUosKe-B12dueTU=",
+    username: "pmherman",
+    password: "123456",
+    date: new Date(Date.now())
+  },
+  {
+    photo: "https://media.licdn.com/dms/image/C4E03AQHlMM_gssjuaw/profile-displayphoto-shrink_800_800/0?e=1530111600&v=beta&t=oPc1yeXvBt0iURxZmh0ArJZ1KBeQ1L-Xl8klxP_9mlU",
+    username: "aclemente",
+    password: "123456",
+    date: new Date(Date.now())
+  },
+  {
+    photo: "/assets/images/tyler.jpg",
+    username: "tyler",
+    password: "123456",
+    date: new Date(Date.now())
+  },
+  {
+    photo: "/assets/images/kendra.jpg",
+    username: "kendra",
+    password: "123456",
     date: new Date(Date.now())
   }
 ];
@@ -87,6 +114,18 @@ db.Thumbnail
   db.Cafe
     .remove({})
     .then(() => db.Cafe.collection.insertMany(cafeSeed))
+    .then(data => {
+      console.log(data.insertedIds.length + " records inserted!");
+      process.exit(0)
+    })
+    .catch(err => {
+      console.long(err);
+      process.exit(1);
+    });
+
+    db.User
+    .remove({})
+    .then(() => db.User.collection.insertMany(userSeed))
     .then(data => {
       console.log(data.insertedIds.length + " records inserted!");
       process.exit(0)
