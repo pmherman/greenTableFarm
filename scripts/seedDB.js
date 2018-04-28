@@ -103,7 +103,11 @@ db.Thumbnail
   .remove({})
   .then(() => db.Thumbnail.collection.insertMany(thumbnailSeed))
   .then(data => {
+<<<<<<< HEAD
     console.log(data.insertedIds.length + " records inserted!");
+=======
+    console.log("Thumbnail Collection Seeded!");
+>>>>>>> master
   })
   .catch(err => {
     console.error(err);
@@ -114,7 +118,11 @@ db.Thumbnail
     .remove({})
     .then(() => db.Cafe.collection.insertMany(cafeSeed))
     .then(data => {
+<<<<<<< HEAD
       console.log(data.insertedIds.length + " records inserted!");
+=======
+      console.log("Cafe Collection Seeded!");
+>>>>>>> master
     })
     .catch(err => {
       console.long(err);
@@ -125,7 +133,7 @@ db.Thumbnail
     .remove({})
     .then(() => db.User.collection.insertMany(userSeed))
     .then(data => {
-      console.log(data.insertedIds.length + " records inserted!");
+      console.log("User Collection Seeded!");
       process.exit(0)
     })
     .catch(err => {
