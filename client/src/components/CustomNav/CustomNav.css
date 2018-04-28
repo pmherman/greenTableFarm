@@ -11,6 +11,10 @@ nav {
     font-family: agilis;
 }
 
+.navbar-brand, .navbar-nav>li>a:hover {
+    color: rgb(52, 150, 50);
+}
+
 .navbar-default {
     background-image: none !important;
     margin-bottom: 0px;

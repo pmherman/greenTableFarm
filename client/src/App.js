@@ -11,10 +11,20 @@ import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
 import Cafe from "./components/Cafe";
 import Contact from "./components/Contact";
+import Signin from "./components/Signin";
 
 
 class App extends Component {
+
   render () {
+    // let mainComponent = "";
+    // switch(this.props.location) {
+    //   case "":
+    //     mainComponent = <Home {...props}/>;
+    //     break;
+    //   case ""
+    // }
+
     return (
         <Router>
           <div>
@@ -28,7 +38,8 @@ class App extends Component {
               <Route path="/adminviewcafe" component={ AdminViewCafe } />
               <Route path="/adminviewlogin" component={ AdminViewLoginPage } />
               <Route path="/contact" component={ Contact } />
-              <Route component={NoMatch} />
+              <Route path="/signin" component= { Signin } />
+              <Route component={ NoMatch } />
             </Switch>
             <Footer />
           </div>
