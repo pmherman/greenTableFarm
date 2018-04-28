@@ -19,7 +19,10 @@ import "./Footer.css";
     </div> */}
     
     {/* Social icons   */}
-    <div className="icons">
+    <div class="icons">
+
+    {/* Like on Facebook */}
+    {/* <div class="fb-like" data-href="https://www.facebook.com/greentablefarm/" data-width="50px" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div> */}
     
       {/* Facebook Update href */}
       <a href="https://www.facebook.com/greentablefarm/" target="_blank">
@@ -45,9 +48,9 @@ import "./Footer.css";
     {/* Social icons   */}
 
     {/*Copyright  */}
-    <div className="footer-copyright">
-      <div className="container">
-        <small>Powered by <i className="fa fa-coffee" aria-hidden="true"></i> and <i className="fa fa-heart" aria-hidden="true"></i> Copyright &copy; Aidan Clemente & Paul Herman 2018</small>
+    <div class="footer-copyright">
+      <div class="container">
+        <small>Powered by <i class="fa fa-coffee" aria-hidden="true"></i> and <a href="/adminview" to="/adminview" className="fa fa-heart" aria-hidden="true"></a> Copyright &copy; Aidan Clemente & Paul Herman 2018</small>
       </div>
     </div>
     {/*/.Copyright  */}

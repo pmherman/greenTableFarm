@@ -17,7 +17,7 @@ class Facebook extends Component {
             allowTransparency="true"
             allow="encrypted-media"
             display="initial"
-            src="https://www.facebook.com/permalink.php?story_fbid=10116691030143684&id=9327905&substory_index=0" />        
+            src="http://www.facebook.com/permalink.php?story_fbid=10116691030143684&id=9327905&substory_index=0" />        
         )
     }
 } 
