@@ -44,27 +44,27 @@ const thumbnailSeed = [
 const cafeSeed = [
   {
     photo : "https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-exlarge-169.jpg",
-    title : "Black Coffee",
+    title : "Organic Coffee",
     description : "A custom made coffee blend",
     price : "$1.49",
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/cookie.jpg",
+    photo: "/assets/images/cookie.jpg",
     title: "Assorted Cookies",
     description: "homemade cookies",
     price: "$6.99 per pound",
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/pie.jpg",
+    photo: "/assets/images/pie.jpg",
     title: "Cherry Pie",
     description: "Home made pie",
     price: "$19.99",
     date: new Date(Date.now())
   },
   {
-    photo: "/assets/candy.jpg",
+    photo: "/assets/images/candy.jpg",
     title: "Chocolate Candy",
     description: "assorted candy",
     price: "$6.99 per pound",
