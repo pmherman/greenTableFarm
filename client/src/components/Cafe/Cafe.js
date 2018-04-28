@@ -46,6 +46,7 @@ class Cafe extends Component {
               <h3>No Results to Display</h3>
             )}
         </Row>
+        <div className="push"></div>
       </Grid>
     )
   }

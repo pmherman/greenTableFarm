@@ -1,4 +1,5 @@
 module.exports = {
   Thumbnail: require("./thumbnail"),
-  Cafe: require("./cafe")
+  Cafe: require("./cafe"),
+  User: require("./user")
 };

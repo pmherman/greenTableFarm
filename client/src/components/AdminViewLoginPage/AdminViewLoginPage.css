@@ -13,6 +13,24 @@
     left: 0px;
 }
 
+.profilePicture {
+    margin-top: 0.5em;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 2px solid gold;
+}
+
+.profileBox {
+    width: 10em;
+    height: 12em;
+}
+
+.profileCol {
+    border: 2px dashed darkgreen;
+    margin: 2em;
+}
+
 .adminViewThumbnail {
     border: 1px solid black !important;
     border-image: none !important;

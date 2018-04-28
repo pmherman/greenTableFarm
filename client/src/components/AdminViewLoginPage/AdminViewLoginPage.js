@@ -1,50 +1,48 @@
 import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
-import "./AdminView.css";
+import "./AdminViewLoginPage.css";
 import API from "../../utils/API";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
-export default class AdminView extends Component {
+export default class AdminViewLoginPage extends Component {
   state = {
-    thumbnails: [],
+    users: [],
     id: "",
     photo: "",
-    title: "",
-    description: "",
-    price: "",
+    username: "",
+    password: ""
   };
   componentDidMount() {
-    this.loadThumbnails();
+    this.loadUsers();
   }
 
-  loadThumbnails = () => {
-    API.getThumbnails()
+  loadUsers = () => {
+    API.getUsers()
       .then(res => {
         console.log("Response:" + res);
-        this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
+        this.setState({ users: res.data, photo: "", username: "", password: "" })
       })
       .catch(err => console.log(err));
   };
 
-  deleteThumbnail = id => {
-    API.deleteThumbnail(id)
-      .then(res => this.loadThumbnails())
+  deleteUser = id => {
+    API.deleteUser(id)
+      .then(res => this.loadUsers())
       .catch(err => console.log(err));
   };
 
   updateForm = id => {
     document.getElementById("submitButton").style.display = "none";
     document.getElementById("editButton").style.display="inline";
-    API.getThumbnail(id)
+    API.getUser(id)
     .then(res => {
       this.setState({
         id: res.data._id,
         photo: res.data.photo,
-        title: res.data.title,
-        description: res.data.description,
-        price: res.data.price
+        username: res.data.username,
+        password: res.data.password
       })
     })
   }
@@ -60,21 +58,19 @@ export default class AdminView extends Component {
     event.preventDefault();
     document.getElementById("editButton").style.display="none";
     document.getElementById("submitButton").style.display = "inline";
-    API.updateThumbnail(this.state.id, {
+    API.updateUser(this.state.id, {
       photo: this.state.photo,
-      title: this.state.title,
-      description: this.state.description,
-      price: this.state.price
+      username: this.state.username,
+      password: this.state.password
     })
     .then(res => {
         this.setState({
         id: res.data._id,
         photo: res.data.photo,
-        title: res.data.title,
-        description: res.data.description,
-        price: res.data.price
+        username: res.data.username,
+        password: res.data.password
       });
-      this.loadThumbnails();
+      this.loadUsers();
       console.log("Updated Photo: " + res.data.photo);
     })
     .catch(err => console.log(err)); 
@@ -82,14 +78,13 @@ export default class AdminView extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.photo && this.state.description && this.state.price) {
-      API.saveThumbnail({
+    if (this.state.username && this.state.photo && this.state.password) {
+      API.saveUser({
         photo: this.state.photo,
-        title: this.state.title,
-        description: this.state.description,
-        price: this.state.price
+        username: this.state.username,
+        password: this.state.password
       })
-        .then(res => this.loadThumbnails())
+        .then(res => this.loadUsers())
         .catch(err => console.log(err));
     }
   };
@@ -106,7 +101,7 @@ export default class AdminView extends Component {
         <Button className="select" href="/adminviewlogin">
           Manage users
         </Button>
-          <h1 className="heading">Entry Form</h1>
+          <h1 className="heading">Add a User</h1>
           <form>
             <Input 
               type="hidden"
@@ -115,35 +110,29 @@ export default class AdminView extends Component {
               name="id"
             />
             <Input
-              value={this.state.title}
-              onChange={this.handleInputChange}
-              name="title"
-              placeholder="Title (required)"
-            />
-            <Input
               value={this.state.photo}
               onChange={this.handleInputChange}
               type="url"
               name="photo"
               placeholder="Link to Photo (http://www.google.com)"
+            />            
+            <Input
+              value={this.state.username}
+              onChange={this.handleInputChange}
+              name="username"
+              placeholder="Username (required)"
             />
             <Input
-              value={this.state.price}
+              value={this.state.password}
               onChange={this.handleInputChange}
               type="text"
-              name="price"
-              placeholder="Price: $4.99"
-            />
-            <TextArea
-              value={this.state.description}
-              onChange={this.handleInputChange}
-              name="description"
-              placeholder="Description of products being sold"
+              name="password"
+              placeholder="Enter Password"
             />
             <FormBtn
               id="editButton"
               className="btn btn-warning"
-              disabled={!(this.state.photo && this.state.title && this.state.description && this.state.price)}
+              disabled={!(this.state.photo && this.state.username && this.state.password)}
               onClick={this.handleUpdate}
             >
               Update Item
@@ -151,7 +140,7 @@ export default class AdminView extends Component {
             <FormBtn
               id="submitButton"
               className="btn btn-success"
-              disabled={!(this.state.photo && this.state.title && this.state.description && this.state.price)}
+              disabled={!(this.state.photo && this.state.username && this.state.password)}
               onClick={this.handleFormSubmit}
             >
               Submit Item
@@ -159,18 +148,17 @@ export default class AdminView extends Component {
           </form>
         </Col>
         <Col md={6}>
-          <h1 className="heading">Admin View - Fresh Farm</h1>
-          {this.state.thumbnails.length ? (
+          <h1 className="heading">Account Management</h1>
+          {this.state.users.length ? (
               <ListGroup>
-                {this.state.thumbnails.map(thumbnail => (
-                      <Col xs={6} md={4} key={thumbnail._id}>
-                      <Thumbnail src={thumbnail.photo} alt="242x200">
-                          <h5>{thumbnail.title}</h5>
-                          <p>{thumbnail.description}</p>
-                          <p>Price: {thumbnail.price}</p>
-                          <UpdateBtn onClick={() => (this.updateForm(thumbnail._id))}/>
-                          <DeleteBtn onClick={() => this.deleteThumbnail(thumbnail._id)} />
-                        </Thumbnail>
+                {this.state.users.map(user => (
+                      <Col className="profileCol text-center" xs={6} md={4} key={user._id}>
+                      <div className = "profileBox">
+                          <img className="profilePicture" src={user.photo} alt="242x200" />
+                          <h5>{user.username}</h5>
+                          <UpdateBtn onClick={() => (this.updateForm(user._id))}/>
+                          <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                        </div>
                       </Col>
                 ))}
               </ListGroup>

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/8.4.0/bin/node /usr/local/bin/yarn deploy
+  /usr/local/Cellar/node/8.4.0/bin/node /usr/local/bin/yarn seed
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -2303,7 +2303,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c yarn build && git add . && git commit -m "Building for production" && git push heroku master
+  Arguments: -c node scripts/seedDB.js
   Directory: /Users/pmherman/BOOTCAMP/Code Projects/GreenpTableFarm
   Output:
   
