@@ -26,8 +26,9 @@ class Cafe extends Component {
   render() {
     return (
       <Grid>
-        <h1 className="text-center">Enjoy our Café Services</h1>
+        <br />
         <img className="coverPhoto text-center" src="/assets/images/coverPhoto.jpg" alt="Cover Photo" />
+        <h1 className="text-center">Café Menu</h1>
         <Row>
           {this.state.cafes.length ? (
               <ListGroup>
