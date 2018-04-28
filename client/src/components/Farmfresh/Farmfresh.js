@@ -23,34 +23,11 @@ export default class Farmfresh extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteThumbnail = id => {
-    API.deleteThumbnail(id)
-      .then(res => this.loadThumbnails())
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveThumbnail({
-        photo: this.state.photo,
-        title: this.state.title,
-        description: this.state.description
-      })
-        .then(res => this.loadThumbnails())
-        .catch(err => console.log(err));
-    }
-  };
   render() {
     return (
       <Grid>
+        <h1 className="text-center">Farm Fresh Products</h1>
+        <img className="coverPhotoFarm text-center" src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/10988303_1586767414902091_6874153224968529675_o.jpg?_nc_cat=0&oh=014ca5e51af1071c23cfc4ce0ec724c6&oe=5B9ABBA3" alt="Cover Photo" />
         <Row>
           {this.state.thumbnails.length ? (
               <ListGroup>
@@ -68,6 +45,7 @@ export default class Farmfresh extends Component {
               <h3>No Results to Display</h3>
             )}
         </Row>
+        <div className="push"></div>
       </Grid>
     )
   }

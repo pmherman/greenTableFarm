@@ -97,7 +97,16 @@ export default class AdminView extends Component {
     return (
       <Grid>
         <Col md={6}>
-          <h1>Entry Form</h1>
+        <Button className="select" href="/adminview">
+          Farm
+        </Button>
+        <Button className="select" href="/adminviewcafe">
+          Café
+        </Button>
+        <Button className="select" href="/adminviewlogin">
+          Manage users
+        </Button>
+          <h1 className="heading">Entry Form</h1>
           <form>
             <Input 
               type="hidden"
@@ -150,7 +159,7 @@ export default class AdminView extends Component {
           </form>
         </Col>
         <Col md={6}>
-          <h1>Admin View</h1>
+          <h1 className="heading">Admin View - Fresh Farm</h1>
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
@@ -169,6 +178,7 @@ export default class AdminView extends Component {
               <h3>No Results to Display</h3>
             )}
         </Col>
+        <div className="push"></div>
       </Grid>
     )
   }

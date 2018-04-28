@@ -1,0 +1,27 @@
+.row {
+    padding: 25px;
+}
+
+.thumbnail {
+    height: 400px;
+}
+
+.heading {
+ text-decoration: underline;
+}
+.select {
+    width: 9em;
+    position: relative;
+    margin-top: 10px;
+    left: 0px;
+}
+
+#editButton {
+    display: none;
+}
+
+#submitButton {
+    display: inline;
+}
+
+
