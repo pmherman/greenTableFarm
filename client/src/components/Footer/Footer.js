@@ -1,7 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import "./Footer.css";
 
  class Footer extends Component {
+
+
   render() {
     return (
         
@@ -19,7 +22,7 @@ import "./Footer.css";
     </div> */}
     
     {/* Social icons   */}
-    <div class="icons">
+    <div className="icons">
 
     {/* Like on Facebook */}
     {/* <div class="fb-like" data-href="https://www.facebook.com/greentablefarm/" data-width="50px" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div> */}
@@ -50,7 +53,7 @@ import "./Footer.css";
     {/*Copyright  */}
     <div className="footer-copyright">
       <div className="container">
-        <small>Powered by <i className="fa fa-coffee" aria-hidden="true"></i> and <i className="fa fa-heart" aria-hidden="true"></i> Copyright &copy; Aidan Clemente & Paul Herman 2018</small>
+        <small>Powered by <i className="fa fa-coffee" aria-hidden="true"></i> and <Link to="/signin"><i className="fa fa-heart" aria-hidden="true"></i> </Link>Copyright &copy; Aidan Clemente & Paul Herman 2018</small>
       </div>
     </div>
     {/*/.Copyright  */}

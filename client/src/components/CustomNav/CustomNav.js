@@ -43,7 +43,8 @@ class CustomNav extends Component {
             <NavItem eventKey={5} componentClass={Link} href="/contact" to="/contact">
               Contact Us
             </NavItem>
-            <NavItem eventKey={4} componentClass={Link} href="/adminview" to="/adminview">
+
+            <NavItem eventKey={6} componentClass={Link} href="/adminview" to="/adminview">
               Admin View
             </NavItem>
           </Nav>

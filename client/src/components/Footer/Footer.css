@@ -23,6 +23,7 @@ small, .fa-coffee, .fa-heart {
 }
 
 .page-footer {
+    /* For Fixed Footer instead of Sticky */
     /* position: fixed;
     bottom: 0px;
     width: 100vw; */
