@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import "./AdminViewCafe.css";
 import API from "../../utils/API";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { InputAdmin, TextAreaAdmin, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
@@ -107,33 +107,33 @@ export default class AdminViewCafe extends Component {
         </Button>
           <h1 className="heading">Entry Form</h1>
           <form>
-            <Input 
+            <InputAdmin 
               type="hidden"
               value={this.state.id}
               onChange={this.handleInputChange}
               name="id"
             />
-            <Input
+            <InputAdmin
               value={this.state.title}
               onChange={this.handleInputChange}
               name="title"
               placeholder="Title (required)"
             />
-            <Input
+            <InputAdmin
               value={this.state.photo}
               onChange={this.handleInputChange}
               type="url"
               name="photo"
               placeholder="Link to Photo (http://www.google.com)"
             />
-            <Input
+            <InputAdmin
               value={this.state.price}
               onChange={this.handleInputChange}
               type="text"
               name="price"
               placeholder="Price: $4.99"
             />
-            <TextArea
+            <TextAreaAdmin
               value={this.state.description}
               onChange={this.handleInputChange}
               name="description"

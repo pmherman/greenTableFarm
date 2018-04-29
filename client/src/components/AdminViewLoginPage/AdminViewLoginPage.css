@@ -29,6 +29,7 @@
 .profileCol {
     border: 2px dashed darkgreen;
     margin: 2em;
+    background-color: white;
 }
 
 .adminViewThumbnail {

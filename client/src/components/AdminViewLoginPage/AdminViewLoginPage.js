@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import "./AdminViewLoginPage.css";
 import API from "../../utils/API";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { InputAdmin, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
@@ -103,26 +103,26 @@ export default class AdminViewLoginPage extends Component {
         </Button>
           <h1 className="heading">Add a User</h1>
           <form>
-            <Input 
+            <InputAdmin 
               type="hidden"
               value={this.state.id}
               onChange={this.handleInputChange}
               name="id"
             />
-            <Input
+            <InputAdmin
               value={this.state.photo}
               onChange={this.handleInputChange}
               type="url"
               name="photo"
               placeholder="Link to Photo (http://www.google.com)"
             />            
-            <Input
+            <InputAdmin
               value={this.state.username}
               onChange={this.handleInputChange}
               name="username"
               placeholder="Username (required)"
             />
-            <Input
+            <InputAdmin
               value={this.state.password}
               onChange={this.handleInputChange}
               type="text"
