@@ -11,7 +11,7 @@ export default class AdminViewLoginPage extends Component {
     users: [],
     id: "",
     photo: "",
-    username: "",
+    email: "",
     password: ""
   };
   componentDidMount() {
@@ -22,7 +22,7 @@ export default class AdminViewLoginPage extends Component {
     API.getUsers()
       .then(res => {
         console.log("Response:" + res);
-        this.setState({ users: res.data, photo: "", username: "", password: "" })
+        this.setState({ users: res.data, photo: "", email: "", password: "" })
       })
       .catch(err => console.log(err));
   };
@@ -41,7 +41,7 @@ export default class AdminViewLoginPage extends Component {
       this.setState({
         id: res.data._id,
         photo: res.data.photo,
-        username: res.data.username,
+        email: res.data.email,
         password: res.data.password
       })
     })
@@ -60,14 +60,14 @@ export default class AdminViewLoginPage extends Component {
     document.getElementById("submitButton").style.display = "inline";
     API.updateUser(this.state.id, {
       photo: this.state.photo,
-      username: this.state.username,
+      email: this.state.email,
       password: this.state.password
     })
     .then(res => {
         this.setState({
         id: res.data._id,
         photo: res.data.photo,
-        username: res.data.username,
+        email: res.data.email,
         password: res.data.password
       });
       this.loadUsers();
@@ -78,10 +78,10 @@ export default class AdminViewLoginPage extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.username && this.state.photo && this.state.password) {
+    if (this.state.email && this.state.photo && this.state.password) {
       API.saveUser({
         photo: this.state.photo,
-        username: this.state.username,
+        email: this.state.email,
         password: this.state.password
       })
         .then(res => this.loadUsers())
@@ -117,10 +117,10 @@ export default class AdminViewLoginPage extends Component {
               placeholder="Link to Photo (http://www.google.com)"
             />            
             <Input
-              value={this.state.username}
+              value={this.state.email}
               onChange={this.handleInputChange}
-              name="username"
-              placeholder="Username (required)"
+              name="email"
+              placeholder="email (required)"
             />
             <Input
               value={this.state.password}
@@ -132,7 +132,7 @@ export default class AdminViewLoginPage extends Component {
             <FormBtn
               id="editButton"
               className="btn btn-warning"
-              disabled={!(this.state.photo && this.state.username && this.state.password)}
+              disabled={!(this.state.photo && this.state.email && this.state.password)}
               onClick={this.handleUpdate}
             >
               Update Item
@@ -140,7 +140,7 @@ export default class AdminViewLoginPage extends Component {
             <FormBtn
               id="submitButton"
               className="btn btn-success"
-              disabled={!(this.state.photo && this.state.username && this.state.password)}
+              disabled={!(this.state.photo && this.state.email && this.state.password)}
               onClick={this.handleFormSubmit}
             >
               Submit Item
@@ -155,7 +155,7 @@ export default class AdminViewLoginPage extends Component {
                       <Col className="profileCol text-center" xs={6} md={4} key={user._id}>
                       <div className = "profileBox">
                           <img className="profilePicture" src={user.photo} alt="242x200" />
-                          <h5>{user.username}</h5>
+                          <h5>{user.email}</h5>
                           <UpdateBtn onClick={() => (this.updateForm(user._id))}/>
                           <DeleteBtn onClick={() => this.deleteUser(user._id)} />
                         </div>

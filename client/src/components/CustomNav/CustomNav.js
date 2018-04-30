@@ -46,7 +46,7 @@ class CustomNav extends Component {
 
             <NavItem eventKey={6} componentClass={Link} href="/adminview" to="/adminview">
               Admin View
-            </NavItem> */}
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

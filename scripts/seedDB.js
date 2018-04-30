@@ -75,25 +75,25 @@ const cafeSeed = [
 const userSeed = [
   {
     photo: "https://media.istockphoto.com/photos/portrait-of-a-happy-young-man-smiling-on-gray-background-picture-id185815404?k=6&m=185815404&s=612x612&w=0&h=5ETUJgJITLROE4zemjbusUCFR7LHgUosKe-B12dueTU=",
-    username: "pmherman",
+    email: "pmherman85@icloud.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "https://media.licdn.com/dms/image/C4E03AQHlMM_gssjuaw/profile-displayphoto-shrink_800_800/0?e=1530111600&v=beta&t=oPc1yeXvBt0iURxZmh0ArJZ1KBeQ1L-Xl8klxP_9mlU",
-    username: "aclemente",
+    email: "aidanclemente@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/tyler.jpg",
-    username: "tyler",
+    email: "tjhoyt7@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/kendra.jpg",
-    username: "kendra",
+    email: "ken2bach@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   }
@@ -103,11 +103,7 @@ db.Thumbnail
   .remove({})
   .then(() => db.Thumbnail.collection.insertMany(thumbnailSeed))
   .then(data => {
-<<<<<<< HEAD
-    console.log(data.insertedIds.length + " records inserted!");
-=======
     console.log("Thumbnail Collection Seeded!");
->>>>>>> master
   })
   .catch(err => {
     console.error(err);
@@ -118,11 +114,7 @@ db.Thumbnail
     .remove({})
     .then(() => db.Cafe.collection.insertMany(cafeSeed))
     .then(data => {
-<<<<<<< HEAD
-      console.log(data.insertedIds.length + " records inserted!");
-=======
       console.log("Cafe Collection Seeded!");
->>>>>>> master
     })
     .catch(err => {
       console.long(err);
