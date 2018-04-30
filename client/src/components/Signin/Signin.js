@@ -19,25 +19,48 @@ export default class Signin extends Component {
 
     handleChange = (event) => {
         this.setState({
-            [event.target.name]: event.target.value
+          [event.target.name]: event.target.value
         });
-    }
-
-    logUserIn = (event) => {
-        event.preventDefault();
-    }
-
-    registerUser = (event) => {
-        event.preventDefault();
-
-        axios.post('/register', {
-            email: this.state.email,
-            password: this.state.password
+      }
+    
+      logUserIn = (e) => {
+        e.preventDefault();
+    
+        axios.post('/login', {
+          email: this.state.email,
+          password: this.state.password
         }).then(res => {
-            console.log(res.data);
+          this.setState({
+            logged_in: true,
+            user: res.data
+          });
         });
-    }
-
+      }
+    
+      registerUser = (e) => {
+        e.preventDefault();
+    
+        axios.post('/register', {
+          email: this.state.email,
+          password: this.state.password
+        }).then(res => {
+          this.setState({
+            logged_in: true,
+            user: res.data
+          });
+        });
+      }
+    
+      logoutUser = () => {
+        axios.get('/logout')
+          .then(res => {
+            this.setState({
+              logged_in: false,
+              user: {}
+            });
+          });
+      }
+    
     render() {
         return (
             <section id="signIn"> 
@@ -85,7 +108,7 @@ export default class Signin extends Component {
                             {/* Submit Button */}
                             <div className="row"> 
                                 <div sm={12}> 
-                                    <button id="submitLogin" type="submit" className="btn btn-lg pull-right">Send</button> 
+                                    <button onClick={this.registerUser} id="submitLogin" type="submit" className="btn btn-lg pull-right">Send</button> 
                                 </div> 
                             </div> 
 
