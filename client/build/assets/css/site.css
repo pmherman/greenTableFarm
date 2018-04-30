@@ -2,3 +2,9 @@
     font-family: agilis;
     src: url("../font/Agilis.otf");
 }
+
+.body {
+    background-color: lightgoldenrodyellow;
+    background-image: url(/assets/images/background.jpg);
+    background-repeat: no-repeat;
+}
