@@ -147,13 +147,13 @@ export default class AdminViewLoginPage extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={6} lg={6}>
           <h1 className="heading">Account Management</h1>
           {this.state.users.length ? (
               <ListGroup>
                 {this.state.users.map(user => (
-                      <Col className="profileCol text-center" xs={6} md={4} key={user._id}>
-                      <div className = "profileBox">
+                      <Col className="profileCol text-center" xs={10} md={4} key={user._id}>
+                      <div className = "profileBox text-center">
                           <img className="profilePicture" src={user.photo} alt="242x200" />
                           <h5>{user.username}</h5>
                           <UpdateBtn onClick={() => (this.updateForm(user._id))}/>
