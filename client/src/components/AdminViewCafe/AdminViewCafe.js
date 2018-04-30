@@ -95,7 +95,7 @@ export default class AdminViewCafe extends Component {
   render() {
     return (
       <Grid>
-        <Col md={6}>
+        <Col xs={12} md={6}>
         <Button className="select" href="/adminview">
           Farm
         </Button>
@@ -157,12 +157,12 @@ export default class AdminViewCafe extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={6}>
           <h1 className="heading">Admin View - Café</h1>
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
-                      <Col xs={6} md={4} key={thumbnail._id}>
+                      <Col xs={12} md={4} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">
                           <h5>{thumbnail.title}</h5>
                           <p>{thumbnail.description}</p>

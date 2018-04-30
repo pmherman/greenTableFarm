@@ -33,7 +33,7 @@ export default class Farmfresh extends Component {
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
-                      <Col xs={6} md={4} key={thumbnail._id}>
+                      <Col xs={12} md={4} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">
                           <h3 className="text-center">{thumbnail.title}</h3>
                           <p className="text-center">{thumbnail.description}</p>

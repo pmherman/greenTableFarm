@@ -33,7 +33,7 @@ class Cafe extends Component {
           {this.state.cafes.length ? (
               <ListGroup>
                 {this.state.cafes.map(cafe => (
-                      <Col xs={6} md={4} key={cafe._id}>
+                      <Col xs={12} md={6} lg={4} key={cafe._id}>
                       <Thumbnail src={cafe.photo} alt="242x200">
                           {console.log("cafe.title: " + cafe.title)}
                           <h3 className="text-center">{cafe.title}</h3>
