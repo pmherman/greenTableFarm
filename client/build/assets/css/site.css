@@ -3,8 +3,16 @@
     src: url("../font/Agilis.otf");
 }
 
-.body {
-    background-color: lightgoldenrodyellow;
+body {
+    background-color: rgba(15, 58, 14);
     background-image: url(/assets/images/background.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: auto;
+}
+
+/* -----------------------ADMIN VIEW PAGES----------------------- */
+/* Changes the elements of the form on all Admin View Pages */
+.admin-control {
+    background-color: transparent;
+    color: black !important;
 }
