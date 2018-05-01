@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('../models/User');
+const { User } = require('../../models');
 
 // passport.authenticate() --> Log the user in after checking user information
 passport.use(new LocalStrategy({
     usernameField: 'email'
 },  (email, password, done) => {
-    User.findOne({email: email})
+    db.User.findOne({email: email})
         .then(user => {
             if ( !user ) done(null, false); // if user doesn't exist then fail login
 
@@ -51,7 +51,9 @@ router.post('/register', (req, res) => {
 
 
 // Loggin in exisitng user
-router.post('/login', (req, res) => {
+router.post('/api/authroutes', (req, res) => {
+    console.log("request " + res);
+    console.log("this is being run!");
     // Pass req so can break down req.body into email and password
     passport.authenticate('local')(req, res, result => {
         res.status(200).send(req.user);

@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const UserSchema = new Schema({
 
   // either make photo not required, try to include the upload file bit
-  photo: { type: String, required: true },
+  photo: { type: String, required: false },
   email: {
     type: String,
     require: true,
@@ -27,7 +27,7 @@ UserSchema.pre('save', function(next) {
   if ( !user.create_at ) {
     user.create_at = date;
 
-    // Encripts the user's password
+    // Encrypts the user's password
     bcrypt.hash(user.password, bcrypt.genSaltSync(10))
       .then(hash => {
         user.password = hash;
@@ -41,4 +41,6 @@ UserSchema.methods.comparePassword =  function(pass) {
   return bcrypt.compare(pass, this.password); // true or false
 }
 
-module.exports = UserSchema;
+const User = mongoose.model("User", UserSchema);
+
+module.exports = User;

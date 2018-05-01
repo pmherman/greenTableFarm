@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import API from "../../utils/API";
+
 
 
 // handleformsubmit method will do an api request to the backend to check if the user name and passoword match anything
@@ -12,6 +14,7 @@ export default class Signin extends Component {
         super();
 
         this.state= {
+            id: '',
             email: '',
             password: ''
         }
@@ -26,7 +29,7 @@ export default class Signin extends Component {
       logUserIn = (e) => {
         e.preventDefault();
     
-        axios.post('/login', {
+        API.loginUser({
           email: this.state.email,
           password: this.state.password
         }).then(res => {
@@ -76,8 +79,7 @@ export default class Signin extends Component {
 
                         {/* Contact Form Start */}
                         {/* update email in action https://formspree.io/your@email.com */}
-                        <form method="GET" action=""
-                            name="signinForm" id="signinForm" novalidate=""> 
+                        <form> 
 
                             {/* User Name  */}
                             <div className="row  control-group"> 
@@ -108,7 +110,7 @@ export default class Signin extends Component {
                             {/* Submit Button */}
                             <div className="row"> 
                                 <div sm={12}> 
-                                    <button onClick={this.registerUser} id="submitLogin" type="submit" className="btn btn-lg pull-right">Send</button> 
+                                    <button onClick={this.logUserIn} id="submitLogin" type="submit" className="btn btn-lg pull-right">Send</button> 
                                 </div> 
                             </div> 
 

@@ -60,5 +60,9 @@ export default {
   // Update a thumbnail to the database
   updateUser: function(id, userData) {
     return axios.put("/api/user/" + id, userData)
+  },
+  loginUser :function(userData) {
+    console.log("response: " + JSON.stringify(userData));
+    return axios.post("/api/authroutes" + userData);
   }
-  };
+};

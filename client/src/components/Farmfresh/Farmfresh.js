@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Grid, Row, Thumbnail, Col, ListGroup } from 'react-bootstrap';
 import "./Farmfresh.css";
 import API from "../../utils/API";
 

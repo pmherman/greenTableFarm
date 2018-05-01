@@ -49,7 +49,7 @@ class App extends Component {
   logUserIn = (e) => {
     e.preventDefault();
 
-    axios.post('/login', {
+    axios.post('/api/user', {
       email: this.state.email,
       password: this.state.password
     }).then(res => {
