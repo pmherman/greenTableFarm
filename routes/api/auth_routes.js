@@ -3,7 +3,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const { User } = require('../../models');
 
-// passport.authenticate() --> Log the user in after checking user information
+// passport.authenticate() --> Logs the user in after checking user information
 passport.use(new LocalStrategy({
     usernameField: 'email'
 },  (email, password, done) => {
@@ -16,6 +16,7 @@ passport.use(new LocalStrategy({
 
             // if they pass these checks, we can log them in
             done(null, {
+                // Saving to the req object to pass across the site
                 id: user._id,
                 email: user.email
             });
@@ -35,6 +36,7 @@ passport.deserializeUser(function (user_id, done) {
 // Routes
 
 // Creating a new user
+// This is handled in userController.js
 router.post('/register', (req, res) => {
     User.create(req.body)
         .then(user => {
@@ -49,7 +51,7 @@ router.post('/register', (req, res) => {
         }).catch(err => res.status(500).send({error: "User could not be created."}));
 });
 
-
+// This is not being called at all
 // Loggin in exisitng user
 router.post('/api/authroutes', (req, res) => {
     console.log("request " + res);

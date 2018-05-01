@@ -19,6 +19,7 @@ const UserSchema = new Schema({
 });
 
 UserSchema.pre('save', function(next) {
+  console.log("UserSchema inside user.js");
   let user = this;
 
   let date = new Date();

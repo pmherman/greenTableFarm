@@ -21,6 +21,8 @@ export default {
   updateThumbnail: function(id, thumbnailData) {
     return axios.put("/api/thumbnail/" + id, thumbnailData)
   },
+
+
   // Information for second Admin Page Routes
   // Gets all cafes
   getCafes: function() {
@@ -41,6 +43,8 @@ export default {
   updateCafe: function(id, cafeData) {
     return axios.put("/api/cafe/" + id, cafeData)
   },
+
+
   // Information for User Accounts
   // Gets all information for Username
   getUsers: function() {
@@ -61,6 +65,8 @@ export default {
   updateUser: function(id, userData) {
     return axios.put("/api/user/" + id, userData)
   },
+
+  // For authorization to login
   loginUser :function(userData) {
     console.log("response: " + JSON.stringify(userData));
     return axios.post("/api/authroutes" + userData);

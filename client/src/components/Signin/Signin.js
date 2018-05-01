@@ -29,10 +29,11 @@ export default class Signin extends Component {
       logUserIn = (e) => {
         e.preventDefault();
     
-        API.loginUser({
+        axios.post({
           email: this.state.email,
           password: this.state.password
         }).then(res => {
+            console.log("response: " + JSON.stringify(res));
           this.setState({
             logged_in: true,
             user: res.data

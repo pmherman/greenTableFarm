@@ -9,6 +9,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const auth_routes = require('./routes/api/auth_routes');
 
 // Init App
 const app = express();
@@ -23,9 +24,6 @@ app.use(bodyParser.json());
 
 // Serve up static assets
 app.use(express.static("client/build"));
-
-// Add routes, both API and view
-app.use(routes);
 
 // Handle Sessions
 app.use(session({
@@ -66,6 +64,12 @@ app.use(session({
 // Passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Add routes, both API and view
+app.use(routes);
+
+// This is also in routes/index.js 
+app.use("/auth_routes", auth_routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/farmfresh");

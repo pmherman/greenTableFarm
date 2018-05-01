@@ -21,7 +21,7 @@ export default class AdminViewLoginPage extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res => {
-        console.log("Response:" + res);
+        console.log("Response:" + JSON.stringify(res));
         this.setState({ users: res.data, photo: "", email: "", password: "" })
       })
       .catch(err => console.log(err));
