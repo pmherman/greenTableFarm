@@ -25,7 +25,7 @@ export default class Farmfresh extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid className="content">
         <br />
         <img className="coverPhotoFarm text-center" src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/10988303_1586767414902091_6874153224968529675_o.jpg?_nc_cat=0&oh=014ca5e51af1071c23cfc4ce0ec724c6&oe=5B9ABBA3" alt="Cover Photo" />
         <h1 className="text-center">Farm Fresh Products</h1>
@@ -33,7 +33,7 @@ export default class Farmfresh extends Component {
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
-                      <Col xs={12} md={4} key={thumbnail._id}>
+                      <Col xs={12} md={3} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">
                           <h3 className="text-center">{thumbnail.title}</h3>
                           <p className="text-center">{thumbnail.description}</p>

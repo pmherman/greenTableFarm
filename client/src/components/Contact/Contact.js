@@ -4,7 +4,7 @@ import "./Contact.css";
 class Contact extends Component {
   render() {
     return (
-        <section id="contact"> 
+        <section id="contact" className="content"> 
             <div className="container"> 
                 <div className="row" id="contactHeader"> 
                     <div className="text-center" lg={12}> 

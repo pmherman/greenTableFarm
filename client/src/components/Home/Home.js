@@ -8,7 +8,7 @@ import './Home.css';
 class Home extends Component {
   render () {
     return(
-      <div className="carousel slide">
+      <div className="carousel slide content">
       <Carousel>
         <Carousel.Item className="carousel-item">
           <div className="view"></div>
