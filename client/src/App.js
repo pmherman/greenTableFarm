@@ -105,9 +105,9 @@ class App extends Component {
               <Route  path="/about" component={ About } />
               <Route path="/cafe" component={ Cafe } />
               <Route  path="/farmfresh" component={ FarmFresh } />
-              <Route path="/adminview" render={props => (
+              {/* <Route path="/adminview" render={props => (
                 this.state.logged_in ? <AdminView email={this.state.user.email} /> : <Redirect to="/signin" />
-              )} />
+              )} /> */}
               <Route path="/adminview" component={ AdminView } />
               <Route path="/adminviewcafe" component={ AdminViewCafe } />
               <Route path="/adminviewlogin" component={ AdminViewLoginPage } />

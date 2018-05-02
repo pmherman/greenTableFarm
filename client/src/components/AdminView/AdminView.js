@@ -158,7 +158,7 @@ export default class AdminView extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col sm={12} md={6}>
+        <Col xs={12} md={6}>
           <h1 className="heading">Admin View - Fresh Farm</h1>
           {this.state.thumbnails.length ? (
               <ListGroup className="adminFarm">

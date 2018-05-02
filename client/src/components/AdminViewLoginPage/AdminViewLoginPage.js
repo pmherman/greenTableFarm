@@ -91,7 +91,7 @@ export default class AdminViewLoginPage extends Component {
   render() {
     return (
       <Grid className="content">
-        <Col md={6}>
+        <Col xs={12} md={6}>
         <Button className="select" href="/adminview">
           Farm
         </Button>
@@ -147,7 +147,7 @@ export default class AdminViewLoginPage extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col className="text-center" xs={12} md={6} lg={6}>
+        <Col className="text-center" xs={12} md={6}>
           <h1 className="heading">Account Management</h1>
           {this.state.users.length ? (
               <ListGroup className="manageUsers">
