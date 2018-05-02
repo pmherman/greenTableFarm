@@ -2,13 +2,6 @@
     padding: 25px;
 }
 
-.select {
-    width: 9em;
-    position: relative;
-    margin-top: 10px;
-    left: 0px;
-}
-
 .manageUsers {
     height: 33em;
     overflow: scroll;

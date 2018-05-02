@@ -74,47 +74,26 @@ const cafeSeed = [
 // Seed for Third collection
 const userSeed = [
   {
-<<<<<<< HEAD
     photo: "https://media.istockphoto.com/photos/portrait-of-a-happy-young-man-smiling-on-gray-background-picture-id185815404?k=6&m=185815404&s=612x612&w=0&h=5ETUJgJITLROE4zemjbusUCFR7LHgUosKe-B12dueTU=",
     email: "pmherman85@icloud.com",
-=======
-    photo: "https://media.licdn.com/dms/image/C4D03AQHu3bWWH20lug/profile-displayphoto-shrink_100_100/0?e=1530154800&v=beta&t=sPIeyBFZIhHRnJcabL3AgnMfAnRQa_Ok5YbLgTq9b64",
-<<<<<<< HEAD
-    username: "pmherman",
->>>>>>> master
-=======
-    email: "pmherman@icloud.com",
->>>>>>> master
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "https://media.licdn.com/dms/image/C4E03AQHlMM_gssjuaw/profile-displayphoto-shrink_800_800/0?e=1530111600&v=beta&t=oPc1yeXvBt0iURxZmh0ArJZ1KBeQ1L-Xl8klxP_9mlU",
-<<<<<<< HEAD
-    email: "aidanclemente@gmail.com",
-=======
     email: "aclemente@gmail.com",
->>>>>>> master
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/tyler.jpg",
-<<<<<<< HEAD
-    email: "tjhoyt7@gmail.com",
-=======
     email: "tyler@gmail.com",
->>>>>>> master
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/kendra.jpg",
-<<<<<<< HEAD
-    email: "ken2bach@gmail.com",
-=======
     email: "kendra@gmail.com",
->>>>>>> master
     password: "123456",
     date: new Date(Date.now())
   }
