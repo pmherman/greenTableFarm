@@ -5,6 +5,12 @@
 .heading {
  text-decoration: underline;
 }
+
+.adminCafe {
+    height: 30em;
+    overflow: scroll;
+}
+
 .select {
     width: 9em;
     position: relative;

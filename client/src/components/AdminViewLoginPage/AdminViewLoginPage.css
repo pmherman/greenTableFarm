@@ -9,6 +9,11 @@
     left: 0px;
 }
 
+.manageUsers {
+    height: 33em;
+    overflow: scroll;
+}
+
 .profilePicture {
     margin-top: 0.5em;
     width: 6em;
@@ -25,6 +30,7 @@
     border: 2px dashed darkgreen;
     margin: 2em;
     background-color: white;
+    width: 20em;
 }
 
 .adminViewThumbnail {

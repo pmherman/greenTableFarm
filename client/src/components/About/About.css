@@ -1,4 +1,11 @@
+.googleMap {
+    width: 100vw !important;
+}
 
+.facebook {
+    height: 35em;
+    overflow: scroll;
+}
 
 @media (min-width: 768px) and (max-width: 1200px) {
     .small {

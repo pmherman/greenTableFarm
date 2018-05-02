@@ -3,20 +3,24 @@ nav {
     border-radius: none !important;
 }
 
-.btn-nav {
-    width: 100vw;
-    font-size: 1em;
+.navbar-nav>li {
+    padding-top: 0.5em;
     background-color: rgb(15, 58, 14);
+    font-size: 1.7em;
 }
 
 .navbar-brand, .navbar-nav>li>a {
     text-shadow: none;
     color: white !important;
     height: 100%;
-    padding-left: 0px;
+    padding: 0em;
     font-family: agilis;
 }
-
+.navbar-nav>li>a {
+    padding-left: 0.3em;
+    margin: 0.5em;
+    font-size: .8em;
+}
 .navbar-nav>li>a:hover {
     color: rgb(52, 150, 50) !important;
 }
@@ -33,11 +37,8 @@ nav {
 } */
 
 .navbar-right {
-    font-size: 1.5em;
     margin-right: 0px;
     margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .logo {

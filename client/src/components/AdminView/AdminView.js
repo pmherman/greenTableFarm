@@ -94,7 +94,7 @@ export default class AdminView extends Component {
   };
   render() {
     return (
-      <Grid>
+      <Grid className="content">
         <Col xs={12} md={6}>
         <Button className="select" href="/adminview">
           Farm
@@ -157,10 +157,10 @@ export default class AdminView extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col sm={12} md={6}>
+        <Col xs={12} md={6}>
           <h1 className="heading">Admin View - Fresh Farm</h1>
           {this.state.thumbnails.length ? (
-              <ListGroup>
+              <ListGroup className="adminFarm">
                 {this.state.thumbnails.map(thumbnail => (
                       <Col xs={12} md={4} key={thumbnail._id}>
                       <Thumbnail className="text-center" src={thumbnail.photo} alt="242x200">

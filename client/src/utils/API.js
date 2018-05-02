@@ -31,15 +31,15 @@ export default {
   getCafe: function(id) {
     return axios.get("/api/cafe/" + id);
   },
-  // Deletes the thumbnail with the given id
+  // Deletes the cafe with the given id
   deleteCafe: function(id) {
     return axios.delete("/api/cafe/" + id);
   },
-  // Saves a thumbnail to the database
+  // Saves a cafe to the database
   saveCafe: function(cafeData) {
     return axios.post("/api/cafe", cafeData);
   },
-  // Update a thumbnail to the database
+  // Update a cafe to the database
   updateCafe: function(id, cafeData) {
     return axios.put("/api/cafe/" + id, cafeData)
   },
@@ -53,15 +53,15 @@ export default {
   getUser: function(id) {
     return axios.get("/api/user/" + id);
   },
-  // Deletes the thumbnail with the given id
+  // Deletes the user with the given id
   deleteUser: function(id) {
     return axios.delete("/api/user/" + id);
   },
-  // Saves a thumbnail to the database
+  // Saves a user to the database
   saveUser: function(userData) {
     return axios.post("/api/user", userData);
   },
-  // Update a thumbnail to the database
+  // Update a user to the database
   updateUser: function(id, userData) {
     return axios.put("/api/user/" + id, userData)
   },

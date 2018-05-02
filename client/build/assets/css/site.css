@@ -16,3 +16,16 @@ body {
     background-color: transparent;
     color: black !important;
 }
+
+/* -----------------------All Thumbnail Cards----------------------- */
+.thumbnail {
+    height: 29em !important;
+}
+.thumbnail>.caption {
+    padding: initial;
+}
+/* -----------------------All Thumbnail Cards----------------------- */
+
+.heading {
+    text-align: center;
+}

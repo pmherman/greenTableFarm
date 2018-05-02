@@ -13,15 +13,19 @@
 
 //     constructor() {
 //         this.login = this.login.bind(this);
+<<<<<<< HEAD
 //         // this.logout = this.logout.bind(this);
 //         // this.handleAuthentication = this.handleAuthentication.bind(this);
 //         // this.isAuthenticated = this.isAuthenticated.bind(this);
+=======
+>>>>>>> master
 //     }
 
 //     login() {
 //         this.auth0.authorize();
 //     }
 
+<<<<<<< HEAD
 //     // handleAuthentication() {
 //     //     this.auth0.parseHash((err, authResult) => {
 //     //       if (authResult && authResult.accessToken && authResult.idToken) {
@@ -60,4 +64,6 @@
 //     //     return new Date().getTime() < expiresAt;
 //     //   }
 
+=======
+>>>>>>> master
 // }

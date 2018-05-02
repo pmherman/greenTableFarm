@@ -21,7 +21,7 @@ export default class AdminViewLoginPage extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res => {
-        // console.log("Response:" + JSON.stringify(res));
+        console.log("Response:" + res);
         this.setState({ users: res.data, photo: "", email: "", password: "" })
       })
       .catch(err => console.log(err));
@@ -90,8 +90,8 @@ export default class AdminViewLoginPage extends Component {
   };
   render() {
     return (
-      <Grid>
-        <Col md={6}>
+      <Grid className="content">
+        <Col xs={12} md={6}>
         <Button className="select" href="/adminview">
           Farm
         </Button>
@@ -117,7 +117,7 @@ export default class AdminViewLoginPage extends Component {
               placeholder="Link to Photo (http://www.google.com)"
             />            
             <InputAdmin
-              value={this.state.username}
+              value={this.state.email}
               onChange={this.handleInputChange}
               name="email"
               placeholder="email (required)"
@@ -147,10 +147,10 @@ export default class AdminViewLoginPage extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col xs={12} md={6} lg={6}>
+        <Col className="text-center" xs={12} md={6}>
           <h1 className="heading">Account Management</h1>
           {this.state.users.length ? (
-              <ListGroup>
+              <ListGroup className="manageUsers">
                 {this.state.users.map(user => (
                       <Col className="profileCol text-center" xs={10} md={4} key={user._id}>
                       <div className = "profileBox text-center">

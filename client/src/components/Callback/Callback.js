@@ -8,4 +8,8 @@ export default class Callback extends Component {
       </div>
     )
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

@@ -2,6 +2,11 @@
     padding: 25px;
 }
 
+.adminFarm {
+    height: 30em;
+    overflow: scroll;
+}
+
 .select {
     width: 9em;
     position: relative;

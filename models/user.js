@@ -40,7 +40,7 @@ UserSchema.pre('save', function(next) {
 // Compares password with encription on signin
 UserSchema.methods.comparePassword =  function(pass) {
   return bcrypt.compare(pass, this.password); // true or false
-}
+};
 
 const User = mongoose.model("User", UserSchema);
 
