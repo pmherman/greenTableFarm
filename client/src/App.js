@@ -5,15 +5,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import FarmFresh from "./components/Farmfresh";
-import AdminView from "./components/AdminView";
+import AdminView from "./pages/AdminView";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
 import Cafe from "./components/Cafe";
 import Contact from "./components/Contact";
-import Signin from "./components/Signin";
-import Callback from "./components/Callback";
-// import Auth from './Auth/Auth';
 
 class App extends Component {
   constructor() {
@@ -143,8 +140,6 @@ class App extends Component {
             </section>)
               )} />
               <Route path="/contact" component={ Contact } />
-              <Route path="/signin" component= { Signin } />
-              <Route path="/callback" component= { Callback } />
               <Route component={ NoMatch } />
             </Switch>
             <Footer/>
