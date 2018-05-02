@@ -69,7 +69,7 @@ class App extends Component {
             <header>
                 {this.state.logged_in ? (
                   <nav>
-                    <span className="navbar-name" onChange={this.handleChange}>Currently Logged In: {this.state.email}</span>
+                    <span className="navbar-name" onChange={this.handleChange}>Currently Logged in as {this.state.email}.</span>
                     <button onClick={this.logoutUser}>Log Out</button>
                   </nav>
                 ) : ''}
@@ -129,6 +129,7 @@ class App extends Component {
                                     <button onClick={this.logUserIn} 
                                       id="submitLogin" 
                                       type="submit"
+
                                       disabled={!(this.state.email && this.state.password)}
                                       className="btn btn-lg pull-right">Send</button> 
                                 </div> 
