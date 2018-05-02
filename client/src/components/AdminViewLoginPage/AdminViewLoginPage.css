@@ -2,10 +2,6 @@
     padding: 25px;
 }
 
-.thumbnail {
-    height: 400px;
-}
-
 .select {
     width: 9em;
     position: relative;
@@ -22,13 +18,13 @@
 }
 
 .profileBox {
-    width: 10em;
     height: 12em;
 }
 
 .profileCol {
     border: 2px dashed darkgreen;
     margin: 2em;
+    background-color: white;
 }
 
 .adminViewThumbnail {

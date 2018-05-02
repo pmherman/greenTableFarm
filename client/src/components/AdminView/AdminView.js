@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import "./AdminView.css";
 import API from "../../utils/API";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { InputAdmin, TextAreaAdmin, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
@@ -95,7 +95,7 @@ export default class AdminView extends Component {
   render() {
     return (
       <Grid>
-        <Col md={6}>
+        <Col xs={12} md={6}>
         <Button className="select" href="/adminview">
           Farm
         </Button>
@@ -107,33 +107,33 @@ export default class AdminView extends Component {
         </Button>
           <h1 className="heading">Entry Form</h1>
           <form>
-            <Input 
+            <InputAdmin 
               type="hidden"
               value={this.state.id}
               onChange={this.handleInputChange}
               name="id"
             />
-            <Input
+            <InputAdmin
               value={this.state.title}
               onChange={this.handleInputChange}
               name="title"
               placeholder="Title (required)"
             />
-            <Input
+            <InputAdmin
               value={this.state.photo}
               onChange={this.handleInputChange}
               type="url"
               name="photo"
               placeholder="Link to Photo (http://www.google.com)"
             />
-            <Input
+            <InputAdmin
               value={this.state.price}
               onChange={this.handleInputChange}
               type="text"
               name="price"
               placeholder="Price: $4.99"
             />
-            <TextArea
+            <TextAreaAdmin
               value={this.state.description}
               onChange={this.handleInputChange}
               name="description"
@@ -157,13 +157,13 @@ export default class AdminView extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col md={6}>
+        <Col sm={12} md={6}>
           <h1 className="heading">Admin View - Fresh Farm</h1>
           {this.state.thumbnails.length ? (
               <ListGroup>
                 {this.state.thumbnails.map(thumbnail => (
-                      <Col xs={6} md={4} key={thumbnail._id}>
-                      <Thumbnail src={thumbnail.photo} alt="242x200">
+                      <Col xs={12} md={4} key={thumbnail._id}>
+                      <Thumbnail className="text-center" src={thumbnail.photo} alt="242x200">
                           <h5>{thumbnail.title}</h5>
                           <p>{thumbnail.description}</p>
                           <p>Price: {thumbnail.price}</p>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import "./AdminViewLoginPage.css";
 import API from "../../utils/API";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { InputAdmin, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
@@ -103,26 +103,26 @@ export default class AdminViewLoginPage extends Component {
         </Button>
           <h1 className="heading">Add a User</h1>
           <form>
-            <Input 
+            <InputAdmin 
               type="hidden"
               value={this.state.id}
               onChange={this.handleInputChange}
               name="id"
             />
-            <Input
+            <InputAdmin
               value={this.state.photo}
               onChange={this.handleInputChange}
               type="url"
               name="photo"
               placeholder="Link to Photo (http://www.google.com)"
             />            
-            <Input
-              value={this.state.email}
+            <InputAdmin
+              value={this.state.username}
               onChange={this.handleInputChange}
               name="email"
               placeholder="email (required)"
             />
-            <Input
+            <InputAdmin
               value={this.state.password}
               onChange={this.handleInputChange}
               type="text"
@@ -147,13 +147,13 @@ export default class AdminViewLoginPage extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={6} lg={6}>
           <h1 className="heading">Account Management</h1>
           {this.state.users.length ? (
               <ListGroup>
                 {this.state.users.map(user => (
-                      <Col className="profileCol text-center" xs={6} md={4} key={user._id}>
-                      <div className = "profileBox">
+                      <Col className="profileCol text-center" xs={10} md={4} key={user._id}>
+                      <div className = "profileBox text-center">
                           <img className="profilePicture" src={user.photo} alt="242x200" />
                           <h5>{user.email}</h5>
                           <UpdateBtn onClick={() => (this.updateForm(user._id))}/>

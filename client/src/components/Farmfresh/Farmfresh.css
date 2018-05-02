@@ -7,16 +7,12 @@ h1, h2, .thumbnail, button {
 }
 
 .coverPhotoFarm {
-    width: 500px;
+    width: 60vw;
     margin: auto;
     display: block;
     border: 30px solid black;
     border-radius: 25px;
     border-image: url("../imgBorder/border3.png") 80 stretch;
-}
-
-.thumbnail {
-    height: 400px;
 }
 
 #price {

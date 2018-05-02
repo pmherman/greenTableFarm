@@ -9,7 +9,7 @@ mongoose.connect(
   {
   }
 );
-
+// Seed for First Collection
 const thumbnailSeed = [
   {
     photo: "https://cdn1.medicalnewstoday.com/content/images/articles/270/270191/carrots-contain-vitamin-a.jpg",
@@ -40,7 +40,7 @@ const thumbnailSeed = [
     date: new Date(Date.now())
   }
 ];
-
+// Seed for Second Collection
 const cafeSeed = [
   {
     photo : "https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-exlarge-169.jpg",
@@ -71,11 +71,16 @@ const cafeSeed = [
     date: new Date(Date.now())
   }
 ];
-
+// Seed for Third collection
 const userSeed = [
   {
+<<<<<<< HEAD
     photo: "https://media.istockphoto.com/photos/portrait-of-a-happy-young-man-smiling-on-gray-background-picture-id185815404?k=6&m=185815404&s=612x612&w=0&h=5ETUJgJITLROE4zemjbusUCFR7LHgUosKe-B12dueTU=",
     email: "pmherman85@icloud.com",
+=======
+    photo: "https://media.licdn.com/dms/image/C4D03AQHu3bWWH20lug/profile-displayphoto-shrink_100_100/0?e=1530154800&v=beta&t=sPIeyBFZIhHRnJcabL3AgnMfAnRQa_Ok5YbLgTq9b64",
+    username: "pmherman",
+>>>>>>> master
     password: "123456",
     date: new Date(Date.now())
   },
@@ -98,7 +103,7 @@ const userSeed = [
     date: new Date(Date.now())
   }
 ];
-
+// Instructions to insert the seeds into the first Collection
 db.Thumbnail
   .remove({})
   .then(() => db.Thumbnail.collection.insertMany(thumbnailSeed))
@@ -109,7 +114,7 @@ db.Thumbnail
     console.error(err);
     process.exit(1);
   });
-
+  // Instructions to insert the seeds into the second Collection
   db.Cafe
     .remove({})
     .then(() => db.Cafe.collection.insertMany(cafeSeed))
@@ -120,7 +125,7 @@ db.Thumbnail
       console.long(err);
       process.exit(1);
     });
-
+  // Instructions to insert the seeds into the third Collection
     db.User
     .remove({})
     .then(() => db.User.collection.insertMany(userSeed))

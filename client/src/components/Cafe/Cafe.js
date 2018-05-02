@@ -26,13 +26,14 @@ class Cafe extends Component {
   render() {
     return (
       <Grid>
-        <h1 className="text-center">Enjoy our Café Services</h1>
+        <br />
         <img className="coverPhoto text-center" src="/assets/images/coverPhoto.jpg" alt="Cover Photo" />
+        <h1 className="text-center">Café Menu</h1>
         <Row>
           {this.state.cafes.length ? (
               <ListGroup>
                 {this.state.cafes.map(cafe => (
-                      <Col xs={6} md={4} key={cafe._id}>
+                      <Col xs={12} md={6} lg={4} key={cafe._id}>
                       <Thumbnail src={cafe.photo} alt="242x200">
                           {console.log("cafe.title: " + cafe.title)}
                           <h3 className="text-center">{cafe.title}</h3>
