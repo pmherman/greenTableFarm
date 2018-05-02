@@ -44,10 +44,6 @@ class CustomNav extends Component {
               <NavItem className="text-center waves-effect waves-green waves-ripple" eventKey={5} componentClass={Link} href="/contact" to="/contact">
                 Contact Us
               </NavItem>
-
-              <NavItem className="text-center waves-effect waves-green waves-ripple" eventKey={6} componentClass={Link} href="/adminview" to="/adminview">
-                Admin View
-              </NavItem>
             </Nav>
           </Navbar.Collapse>
       </Navbar>
