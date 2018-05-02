@@ -22,7 +22,6 @@ export default class AdminView extends Component {
   loadThumbnails = () => {
     API.getThumbnails()
       .then(res => {
-        console.log("Response:" + res);
         this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
       })
       .catch(err => console.log(err));
@@ -100,7 +99,7 @@ export default class AdminView extends Component {
         <Button className="select" href="/adminview">
           Farm
         </Button>
-        <Button className="select" href="/adminviewcafe">
+        <Button className="select" href="/adminview/cafe">
           Café
         </Button>
         <Button className="select" href="/adminviewlogin">

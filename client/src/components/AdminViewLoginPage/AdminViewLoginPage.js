@@ -120,7 +120,7 @@ export default class AdminViewLoginPage extends Component {
               value={this.state.email}
               onChange={this.handleInputChange}
               name="email"
-              placeholder="Username (required)"
+              placeholder="email (required)"
             />
             <InputAdmin
               value={this.state.password}

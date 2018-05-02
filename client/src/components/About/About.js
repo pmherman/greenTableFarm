@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import MapContainer from '../MapContainer';
 import { relative } from 'upath';
-import Facebook from "../Facebook";
+// import Facebook from "../Facebook";
 import "./About.css";
 
 const style = {
