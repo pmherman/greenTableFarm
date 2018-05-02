@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Cafe.css";
-import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Grid, Row, Thumbnail, Col, ListGroup } from 'react-bootstrap';
 import API from "../../utils/API";
 
 class Cafe extends Component {
@@ -27,7 +27,7 @@ class Cafe extends Component {
     return (
       <Grid className="content">
         <br />
-        <img className="coverPhoto text-center" src="/assets/images/coverPhoto.jpg" alt="Cover Photo" />
+        <img className="coverPhoto text-center" src="/assets/images/coverPhoto.jpg" alt="Kendra and Fairlight at Cafe" />
         <h1 className="text-center">Café Menu</h1>
         <Row>
           {this.state.cafes.length ? (

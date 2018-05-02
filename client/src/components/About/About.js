@@ -25,6 +25,7 @@ class About extends Component {
             <div className="facebook" sm={12} md={6}>
           <iframe 
             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftim.m.wilson1%2Fposts%2F10155436064349838%3A0&width=500" 
+            title="facebookReview1"
             width="600" 
             height="373" 
             scrolling="no" 
@@ -34,6 +35,7 @@ class About extends Component {
           </iframe>
           <iframe 
             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D10116691030143684%26id%3D9327905%26substory_index%3D0&width=500" 
+            title="facebookReview2"
             width="600" 
             height="335" 
             scrolling="no" 
@@ -43,6 +45,7 @@ class About extends Component {
           </iframe>
           <iframe 
             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmatt.margo%2Fposts%2F10100194791044636%3A2&width=500" 
+            title="facebookReview3"
             width="600" 
             height="335" 
             scrolling="no" 

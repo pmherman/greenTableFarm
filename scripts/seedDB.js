@@ -87,13 +87,13 @@ const userSeed = [
   },
   {
     photo: "/assets/images/tyler.jpg",
-    email: "tyler@gmail.com",
+    email: "tjhoyt7@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/kendra.jpg",
-    email: "kendra@gmail.com",
+    email: "ken2bach@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   }

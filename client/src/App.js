@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import axios from 'axios';
 import API from "./utils/API";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import FarmFresh from "./components/Farmfresh";
@@ -24,9 +24,9 @@ class App extends Component {
         email: '',
         password: ''
     }
-}
+  }
 
-handleChange = (event) => {
+  handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -41,26 +41,16 @@ handleChange = (event) => {
     }).then(res => {
       this.setState({
         logged_in: true,
-        user: res.data
+        user: res.data,
+        email: "", 
+        password: "" 
       });
     });
   }
 
-  registerUser = (e) => {
+  logoutUser = (e) => {
     e.preventDefault();
 
-    axios.post('/register', {
-      email: this.state.email,
-      password: this.state.password
-    }).then(res => {
-      this.setState({
-        logged_in: true,
-        user: res.data
-      });
-    });
-  }
-
-  logoutUser = () => {
     axios.get('/logout')
       .then(res => {
         this.setState({
@@ -90,7 +80,9 @@ handleChange = (event) => {
               <Route path="/cafe" component={ Cafe } />
               <Route  path="/farmfresh" component={ FarmFresh } />
               <Route path="/adminview" render={props => (
-                this.state.logged_in ? <AdminView email={this.state.user.email} /> : (<section id="signIn"> 
+                this.state.logged_in 
+                ? <AdminView email={this.state.user.email} /> 
+                : (<section id="signIn"> 
                 <div className="container"> 
                     <div className="row" id="signinHeader"> 
                         <div className="text-center" lg={12}> 

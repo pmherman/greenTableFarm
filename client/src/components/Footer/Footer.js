@@ -28,7 +28,7 @@ import "./Footer.css";
     {/* <div class="fb-like" data-href="https://www.facebook.com/greentablefarm/" data-width="50px" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div> */}
     
       {/* Facebook Update href */}
-      <a href="https://www.facebook.com/greentablefarm/" target="_blank">
+      <a href="https://www.facebook.com/greentablefarm/" target="_blank" rel="noopener noreferrer">
         <i className="icon fa fa-facebook mr-3"></i>
       </a>
 
@@ -38,12 +38,12 @@ import "./Footer.css";
       </a>
 
       {/* GitHub update href */}
-      {/* <a href="" target="_blank">
+      {/* <a href="" target="_blank" rel="noopener noreferrer">
         <i className="icon fa fa-github mr-3"></i>
       </a> */}
 
       {/* LinkedIn update href */}
-      {/* <a className="social-link rounded-circle text-white mr-3" data-toggle="tooltip" data-placement="top" target="_blank" title="LinkedIn" href="">
+      {/* <a className="social-link rounded-circle text-white mr-3" data-toggle="tooltip" data-placement="top" target="_blank" rel="noopener noreferrer" title="LinkedIn" href="">
         <i className="icon fa fa-linkedin" aria-hidden="true"></i>
       </a> */}
 

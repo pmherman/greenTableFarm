@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Grid, Thumbnail, Col, ListGroup } from 'react-bootstrap';
 import "./AdminViewCafe.css";
 import API from "../../utils/API";
 import { InputAdmin, TextAreaAdmin, FormBtn } from "../../components/Form";
@@ -22,7 +22,6 @@ export default class AdminViewCafe extends Component {
   loadCafes = () => {
     API.getCafes()
       .then(res => {
-        console.log("Response:" + res);
         this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
       })
       .catch(err => console.log(err));
