@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import { Grid, Thumbnail, Col, Button, ListGroup } from 'react-bootstrap';
-=======
->>>>>>> master
 import "./AdminView.css";
 import AdminViewFarm from "../AdminViewFarm";
 import AdminViewCafe from "../AdminViewCafe";

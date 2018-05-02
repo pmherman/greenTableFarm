@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Col, Button, ListGroup } from 'react-bootstrap';
+import { Grid, Col, ListGroup } from 'react-bootstrap';
 import "./AdminViewLoginPage.css";
 import API from "../../utils/API";
 import { InputAdmin, FormBtn } from "../../components/Form";
@@ -21,8 +21,11 @@ export default class AdminViewLoginPage extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res => {
-        console.log("Response:" + res);
-        this.setState({ users: res.data, photo: "", email: "", password: "" })
+        this.setState({ 
+          users: res.data, 
+          photo: "", 
+          email: "", 
+          password: "" })
       })
       .catch(err => console.log(err));
   };

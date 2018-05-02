@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Grid, Thumbnail, Col, ListGroup } from 'react-bootstrap';
 import "./AdminViewFarm.css";
 import API from "../../utils/API";
 import { InputAdmin, TextAreaAdmin, FormBtn } from "../../components/Form";

@@ -23,7 +23,7 @@ export default {
   },
 
 
-  // Information for second Admin Page Routes
+  // ---- Second Admin Page Routes ----
   // Gets all cafes
   getCafes: function() {
     return axios.get("/api/cafe");
@@ -45,7 +45,7 @@ export default {
   },
 
 
-  // Information for User Accounts
+  // ---- User Accounts ----
   // Gets all information for Username
   getUsers: function() {
     return axios.get("/api/user");
@@ -66,9 +66,8 @@ export default {
     return axios.put("/api/user/" + id, userData)
   },
 
-  // For authorization to login
+  // Authorization to login
   loginUser: function(userData) {
-    console.log("response Login: " + JSON.stringify(userData.email));
     return axios.post("/api/user/login", userData);
   }
 };
