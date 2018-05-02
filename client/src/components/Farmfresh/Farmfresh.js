@@ -27,7 +27,7 @@ export default class Farmfresh extends Component {
     return (
       <Grid className="content">
         <br />
-        <img className="coverPhotoFarm text-center" src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/10988303_1586767414902091_6874153224968529675_o.jpg?_nc_cat=0&oh=014ca5e51af1071c23cfc4ce0ec724c6&oe=5B9ABBA3" alt="Cover Photo" />
+        <img className="coverPhotoFarm text-center" src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/10988303_1586767414902091_6874153224968529675_o.jpg?_nc_cat=0&oh=014ca5e51af1071c23cfc4ce0ec724c6&oe=5B9ABBA3" alt="Tyler and Kendra on Farm" />
         <h1 className="text-center">Farm Fresh Products</h1>
         <Row>
           {this.state.thumbnails.length ? (

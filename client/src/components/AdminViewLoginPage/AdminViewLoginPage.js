@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Grid, Col, Button, ListGroup } from 'react-bootstrap';
 import "./AdminViewLoginPage.css";
 import API from "../../utils/API";
-import { InputAdmin, TextArea, FormBtn } from "../../components/Form";
+import { InputAdmin, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 

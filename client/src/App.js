@@ -79,22 +79,15 @@ handleChange = (event) => {
         <Router>
           <div>
             <Nav />
-            <header>
-              <h3>Authentication Example</h3>
-                {this.state.logged_in ? (
-                  <nav>
-                    <span>{this.state.user.email}</span>
-                    <button onClick={this.logoutUser}>Log Out</button>
-                  </nav>
-                ) : ''}
-            </header>
             <Switch>
               <Route exact path="/" component={ Home } />
               <Route  path="/about" component={ About } />
               <Route path="/cafe" component={ Cafe } />
               <Route  path="/farmfresh" component={ FarmFresh } />
               <Route path="/adminview" render={props => (
-                this.state.logged_in ? <AdminView email={this.state.user.email} /> : (<section id="signIn"> 
+                this.state.logged_in 
+                ? <AdminView email={this.state.user.email} /> 
+                : (<section id="signIn"> 
                 <div className="container"> 
                     <div className="row" id="signinHeader"> 
                         <div className="text-center" lg={12}> 

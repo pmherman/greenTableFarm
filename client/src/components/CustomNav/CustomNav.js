@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Navbar, Nav, NavItem, Image, Col } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./CustomNav.css";
 
@@ -7,7 +7,7 @@ class CustomNav extends Component {
 
   render() {
     return (
-      <Navbar fluid="text-center true" default collapseOnSelect>
+      <Navbar fluid="true" default collapseOnSelect>
           <Navbar.Header className="col-sm-6 container-fluid" >
 
             {/* Brand  */}
