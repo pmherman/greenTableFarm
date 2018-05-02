@@ -67,8 +67,8 @@ export default {
   },
 
   // For authorization to login
-  loginUser :function(userData) {
-    console.log("response: " + JSON.stringify(userData));
-    return axios.post("/api/authroutes" + userData);
+  loginUser: function(userData) {
+    console.log("response Login: " + JSON.stringify(userData.email));
+    return axios.post("/api/user/login", userData);
   }
 };
