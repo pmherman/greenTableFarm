@@ -53,7 +53,7 @@ import "./Footer.css";
     {/*Copyright  */}
     <div className="footer-copyright">
       <div className="container">
-        <small>Powered by <i className="fa fa-coffee" aria-hidden="true"></i> and <Link to="/signin"><i className="fa fa-heart" aria-hidden="true"></i> </Link>Copyright &copy; Aidan Clemente & Paul Herman 2018</small>
+        <small>Powered by <i className="fa fa-coffee" aria-hidden="true"></i> and <Link to="/adminview"><i className="fa fa-heart" aria-hidden="true"></i> </Link>Copyright &copy; Aidan Clemente & Paul Herman 2018</small>
       </div>
     </div>
     {/*/.Copyright  */}

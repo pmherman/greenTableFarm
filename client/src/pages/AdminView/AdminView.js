@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import "./AdminView.css";
-import AdminViewFarm from "../AdminViewFarm";
-import AdminViewCafe from "../AdminViewCafe";
-import AdminViewLogin from "../AdminViewLoginPage";
+import AdminViewFarm from "../../components/AdminViewFarm";
+import AdminViewCafe from "../../components/AdminViewCafe";
+import AdminViewLogin from "../../components/AdminViewLoginPage";
 import { Button } from 'react-bootstrap';
 
 export default class AdminView extends Component {
