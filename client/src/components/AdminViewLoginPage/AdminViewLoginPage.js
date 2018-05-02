@@ -92,15 +92,6 @@ export default class AdminViewLoginPage extends Component {
     return (
       <Grid className="content">
         <Col xs={12} md={6}>
-        <Button className="select" href="/adminview">
-          Farm
-        </Button>
-        <Button className="select" href="/adminviewcafe">
-          Café
-        </Button>
-        <Button className="select" href="/adminviewlogin">
-          Manage users
-        </Button>
           <h1 className="heading">Add a User</h1>
           <form>
             <InputAdmin 
