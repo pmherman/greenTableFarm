@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Grid, Row, Thumbnail, Col, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
-import "./AdminViewCafe.css";
+import "./AdminViewFarm.css";
 import API from "../../utils/API";
 import { InputAdmin, TextAreaAdmin, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import UpdateBtn from "../../components/UpdateBtn";
 
-export default class AdminViewCafe extends Component {
+export default class AdminViewFarm extends Component {
   state = {
     thumbnails: [],
     id: "",
@@ -16,28 +16,27 @@ export default class AdminViewCafe extends Component {
     price: "",
   };
   componentDidMount() {
-    this.loadCafes();
+    this.loadThumbnails();
   }
 
-  loadCafes = () => {
-    API.getCafes()
+  loadThumbnails = () => {
+    API.getThumbnails()
       .then(res => {
-        console.log("Response:" + res);
         this.setState({ thumbnails: res.data, photo: "", title: "", description: "", price: "" })
       })
       .catch(err => console.log(err));
   };
 
-  deleteCafe = id => {
-    API.deleteCafe(id)
-      .then(res => this.loadCafes())
+  deleteThumbnail = id => {
+    API.deleteThumbnail(id)
+      .then(res => this.loadThumbnails())
       .catch(err => console.log(err));
   };
 
   updateForm = id => {
     document.getElementById("submitButton").style.display = "none";
     document.getElementById("editButton").style.display="inline";
-    API.getCafe(id)
+    API.getThumbnail(id)
     .then(res => {
       this.setState({
         id: res.data._id,
@@ -60,7 +59,7 @@ export default class AdminViewCafe extends Component {
     event.preventDefault();
     document.getElementById("editButton").style.display="none";
     document.getElementById("submitButton").style.display = "inline";
-    API.updateCafe(this.state.id, {
+    API.updateThumbnail(this.state.id, {
       photo: this.state.photo,
       title: this.state.title,
       description: this.state.description,
@@ -74,7 +73,8 @@ export default class AdminViewCafe extends Component {
         description: res.data.description,
         price: res.data.price
       });
-      this.loadCafes();
+      this.loadThumbnails();
+      console.log("Updated Photo: " + res.data.photo);
     })
     .catch(err => console.log(err)); 
   }
@@ -82,13 +82,13 @@ export default class AdminViewCafe extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.photo && this.state.description && this.state.price) {
-      API.saveCafe({
+      API.saveThumbnail({
         photo: this.state.photo,
         title: this.state.title,
         description: this.state.description,
         price: this.state.price
       })
-        .then(res => this.loadCafes())
+        .then(res => this.loadThumbnails())
         .catch(err => console.log(err));
     }
   };
@@ -149,17 +149,17 @@ export default class AdminViewCafe extends Component {
           </form>
         </Col>
         <Col xs={12} md={6}>
-          <h1 className="heading">Admin View - Café</h1>
+          <h1 className="heading">Admin View - Fresh Farm</h1>
           {this.state.thumbnails.length ? (
-              <ListGroup className="adminCafe">
+              <ListGroup className="adminFarm">
                 {this.state.thumbnails.map(thumbnail => (
                       <Col xs={12} md={4} key={thumbnail._id}>
-                      <Thumbnail src={thumbnail.photo} alt="242x200">
+                      <Thumbnail className="text-center" src={thumbnail.photo} alt="242x200">
                           <h5>{thumbnail.title}</h5>
                           <p>{thumbnail.description}</p>
                           <p>Price: {thumbnail.price}</p>
                           <UpdateBtn onClick={() => (this.updateForm(thumbnail._id))}/>
-                          <DeleteBtn onClick={() => this.deleteCafe(thumbnail._id)} />
+                          <DeleteBtn onClick={() => this.deleteThumbnail(thumbnail._id)} />
                         </Thumbnail>
                       </Col>
                 ))}

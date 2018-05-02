@@ -41,6 +41,12 @@ nav {
     margin-top: 20px;
 }
 
+.navbar-name {
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+}
+
 .logo {
     width: 70%;
 }

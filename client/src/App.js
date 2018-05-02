@@ -6,8 +6,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import FarmFresh from "./components/Farmfresh";
 import AdminView from "./components/AdminView";
-import AdminViewCafe from "./components/AdminViewCafe";
-import AdminViewLoginPage from "./components/AdminViewLoginPage";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
@@ -36,12 +34,11 @@ handleChange = (event) => {
 
   logUserIn = (e) => {
     e.preventDefault();
-
+    
     API.loginUser({
       email: this.state.email,
       password: this.state.password
     }).then(res => {
-        console.log("logged in!");
       this.setState({
         logged_in: true,
         user: res.data
@@ -80,10 +77,9 @@ handleChange = (event) => {
           <div>
             <Nav />
             <header>
-              <h3>Authentication Example</h3>
                 {this.state.logged_in ? (
                   <nav>
-                    <span>{this.state.user.email}</span>
+                    <span className="navbar-name" onChange={this.handleChange}>Currently Logged In: {this.state.email}</span>
                     <button onClick={this.logoutUser}>Log Out</button>
                   </nav>
                 ) : ''}
@@ -112,7 +108,7 @@ handleChange = (event) => {
                             {/* User Name  */}
                             <div className="row  control-group"> 
                                 <div className="form-group" sm={12}> 
-                                    <input type="text" 
+                                    <input type="email" 
                                     className="form-control" 
                                     placeholder="Email" 
                                     value={this.state.email} 
@@ -125,7 +121,7 @@ handleChange = (event) => {
                             {/* User Password */}
                             <div className="row control-group"> 
                                 <div className="form-group" sm={12}> 
-                                    <input type="text" 
+                                    <input type="password" 
                                     className="form-control" 
                                     placeholder="Password" 
                                     name="password" 
@@ -138,7 +134,11 @@ handleChange = (event) => {
                             {/* Submit Button */}
                             <div className="row"> 
                                 <div sm={12}> 
-                                    <button onClick={this.logUserIn} id="submitLogin" type="submit" className="btn btn-lg pull-right">Send</button> 
+                                    <button onClick={this.logUserIn} 
+                                      id="submitLogin" 
+                                      type="submit"
+                                      disabled={!(this.state.email && this.state.password)}
+                                      className="btn btn-lg pull-right">Send</button> 
                                 </div> 
                             </div> 
 
@@ -149,8 +149,6 @@ handleChange = (event) => {
                 <div className="push"></div>
             </section>)
               )} />
-              <Route path="/adminview/cafe" component={ AdminViewCafe } />
-              <Route path="/adminviewlogin" component={ AdminViewLoginPage } />
               <Route path="/contact" component={ Contact } />
               <Route path="/signin" component= { Signin } />
               <Route path="/callback" component= { Callback } />
