@@ -94,7 +94,7 @@ export default class AdminViewCafe extends Component {
   };
   render() {
     return (
-      <Grid>
+      <Grid className="content">
         <Col xs={12} md={6}>
         <Button className="select" href="/adminview">
           Farm
@@ -160,7 +160,7 @@ export default class AdminViewCafe extends Component {
         <Col xs={12} md={6}>
           <h1 className="heading">Admin View - Café</h1>
           {this.state.thumbnails.length ? (
-              <ListGroup>
+              <ListGroup className="adminCafe">
                 {this.state.thumbnails.map(thumbnail => (
                       <Col xs={12} md={4} key={thumbnail._id}>
                       <Thumbnail src={thumbnail.photo} alt="242x200">

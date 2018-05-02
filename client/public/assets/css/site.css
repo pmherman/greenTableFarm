@@ -10,6 +10,12 @@ body {
     background-size: auto;
 }
 
+.content {
+    min-height: 100%;
+    padding-bottom: 139px;
+}
+
+
 /* -----------------------ADMIN VIEW PAGES----------------------- */
 /* Changes the elements of the form on all Admin View Pages */
 .admin-control {

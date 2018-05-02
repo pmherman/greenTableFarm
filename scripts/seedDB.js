@@ -75,25 +75,25 @@ const cafeSeed = [
 const userSeed = [
   {
     photo: "https://media.licdn.com/dms/image/C4D03AQHu3bWWH20lug/profile-displayphoto-shrink_100_100/0?e=1530154800&v=beta&t=sPIeyBFZIhHRnJcabL3AgnMfAnRQa_Ok5YbLgTq9b64",
-    username: "pmherman",
+    email: "pmherman@icloud.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "https://media.licdn.com/dms/image/C4E03AQHlMM_gssjuaw/profile-displayphoto-shrink_800_800/0?e=1530111600&v=beta&t=oPc1yeXvBt0iURxZmh0ArJZ1KBeQ1L-Xl8klxP_9mlU",
-    username: "aclemente",
+    email: "aclemente@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/tyler.jpg",
-    username: "tyler",
+    email: "tyler@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   },
   {
     photo: "/assets/images/kendra.jpg",
-    username: "kendra",
+    email: "kendra@gmail.com",
     password: "123456",
     date: new Date(Date.now())
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 import MapContainer from '../MapContainer';
 import { relative } from 'upath';
 import Facebook from "../Facebook";
@@ -12,18 +12,17 @@ const style = {
 class About extends Component {
   render() {
     return (
-      <div>
-       <Row className="text-center">
-          <div>
-            <h2 className="col-lg-6 col-sm-12">Where Are We Located?</h2>
-          </div>
-       </Row>
-       <Row className="text-center">
-        <MapContainer 
-          className="col-lg-6 col-sm-12" 
-          style={style}
+      <div className="content">
+       <Row>
+          <Col sm={12} md={6}>
+            <h2>Where Are We Located?</h2>
+            <MapContainer 
+              style={style}
           /> 
-        <div className="col-lg-6 col-sm-12 small">
+          </Col>
+          <Col md={6} sm={12}>
+            <h2>Facebook Reviews</h2>
+            <div className="facebook" sm={12} md={6}>
           <iframe 
             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftim.m.wilson1%2Fposts%2F10155436064349838%3A0&width=500" 
             width="600" 
@@ -52,6 +51,7 @@ class About extends Component {
             allow="encrypted-media">
           </iframe>
         </div>
+          </Col>
         </Row>
       </div>
     )

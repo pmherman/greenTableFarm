@@ -19,3 +19,9 @@ h1, h2, .thumbnail, button {
     color: darkgreen;
     font-weight: bold;
 }
+
+@media (min-width: 990px) and (max-width: 2000px) {
+    .coverPhotoFarm {
+        width: 30vw;
+    }
+}
