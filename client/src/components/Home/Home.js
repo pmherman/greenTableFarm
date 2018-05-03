@@ -50,7 +50,7 @@ class Home extends Component {
 
             {/* Optional Summary below the slides */}
 
-            <p className="summary"> &nbsp; Green Table Farm is booking wedding and event dates for the upcoming season. Get married or host your event on a working farm/ranch in the scenic Mancos Valley. Farm to table catering is also available through Green Table Cafe. Prices are very reasonable this season, so dates are filling up fast. Book now to lock in your date at a magical place in the Southwest!</p>
+            <p className="summary text-center"> &nbsp; Green Table Farm is booking wedding and event dates for the upcoming season. Get married or host your event on a working farm/ranch in the scenic Mancos Valley. Farm to table catering is also available through Green Table Cafe. Prices are very reasonable this season, so dates are filling up fast. Book now to lock in your date at a magical place in the Southwest!</p>
           </Row>
         </Grid>
       </div>
