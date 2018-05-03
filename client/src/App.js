@@ -11,6 +11,18 @@ import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
 import Cafe from "./components/Cafe";
 import Contact from "./components/Contact";
+import Modal from 'react-modal';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 class App extends Component {
   constructor() {
@@ -19,8 +31,13 @@ class App extends Component {
     this.state= {
         id: '',
         email: '',
-        password: ''
+        password: '',
+        modalIsOpen: false
     }
+
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleChange = (event) => {
@@ -36,15 +53,15 @@ class App extends Component {
       email: this.state.email,
       password: this.state.password
     }).then(res => {
-      this.setState({
+      this.setState(
+        {
         logged_in: true,
         user: res.data,
         email: "", 
-        password: "" 
+        password: ""
       });
     });
   }
-
   logoutUser = (e) => {
     e.preventDefault();
 
@@ -57,10 +74,24 @@ class App extends Component {
       });
   }
 
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+ 
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = '#f00';
+  }
+ 
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
   render () {
 
     return (
         <Router>
+          
           <div>
             <Nav />
             <header>
@@ -130,7 +161,6 @@ class App extends Component {
                                       className="btn btn-lg pull-right">Send</button> 
                                 </div> 
                             </div> 
-
                         </form> {/* End Contact Form */}
                     </div> {/* End md={8} offset-md-2 */}
                     </div> {/* End row*/}
@@ -142,6 +172,21 @@ class App extends Component {
               <Route component={ NoMatch } />
             </Switch>
             <Footer/>
+            <div>
+              {/* Working on modal for authentication alert */}
+              {/* <button onClick={this.openModal}>Open Modal</button> */}
+              <Modal
+                isOpen={this.state.modalIsOpen}
+                onAfterOpen={this.afterOpenModal}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+              >
+      
+                <h2 ref={subtitle => this.subtitle = subtitle}>ACCESS DENIED</h2>
+                <button onClick={this.closeModal}>close</button>
+              </Modal>
+            </div>
           </div>
         </Router>
     )
