@@ -7,7 +7,7 @@ h1, h2, .thumbnail, button {
 }
 
 .coverPhotoFarm {
-    width: 60vw;
+    width: 80vw;
     margin: auto;
     display: block;
     border: 30px solid black;
@@ -20,8 +20,14 @@ h1, h2, .thumbnail, button {
     font-weight: bold;
 }
 
-@media (min-width: 990px) and (max-width: 2000px) {
+@media (min-width: 600px) {
     .coverPhotoFarm {
-        width: 30vw;
+        width: 60vw;
+    }
+}
+
+@media (min-width: 990px) {
+    .coverPhotoFarm {
+        width: 45vw;
     }
 }

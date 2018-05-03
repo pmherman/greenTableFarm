@@ -1,9 +1,3 @@
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0px;
-}
-
 #footerConnect {
     margin-bottom: 0px;
 }
@@ -29,10 +23,11 @@ small, .fa-coffee, .fa-heart {
 }
 
 .page-footer {
-    /* For Fixed Footer instead of Sticky */
-    /* position: fixed;
+    /* For Sticky Footer instead of Fixed: delete these */
+    position: fixed;
     bottom: 0px;
-    width: 100vw; */
+    width: 100vw;
+    /* --------------- */
     font-family: agilis;
     background-color:rgba(15, 58, 14);
     padding-top: 10px;
