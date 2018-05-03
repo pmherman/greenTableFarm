@@ -17,11 +17,11 @@ class About extends Component {
           <Col sm={12} md={6}>
             <h2 className="text-center">About Us</h2>
 
-            <p> &nbsp; We are a small-scale diversified vegetable and livestock farm that focuses on raising heritage and heirloom varieties adapted to the arid Southwest climate. </p>
+            <p className="aboutText"> &nbsp; We are a small-scale diversified vegetable and livestock farm that focuses on raising heritage and heirloom varieties adapted to the arid Southwest climate. </p>
 
-            <p> &nbsp; Over 75+ varieties of vegetables are grown and sold at the Durango Farmers Market and through Southwest Farm Fresh Coop. We also have a sizable laying flock of chickens, which lay some of the most delicious eggs in the area because of their pasture-based and non-GMO diet. Our ducks and turkeys contribute to the egg supply as well this year.</p> 
+            <p className="aboutText"> &nbsp; Over 75+ varieties of vegetables are grown and sold at the Durango Farmers Market and through Southwest Farm Fresh Coop. We also have a sizable laying flock of chickens, which lay some of the most delicious eggs in the area because of their pasture-based and non-GMO diet. Our ducks and turkeys contribute to the egg supply as well this year.</p> 
               
-            <p> &nbsp; Our goats and hogs are rotated through our regenerating pastures to add more organic material to the soil and practice pig tillage on plots to be used for vegetable production the following year. We are incredibly visible from highway 184, just .9 miles from the stoplight in Mancos on the left. Look for the big blue bus (intern housing) and some hard working humans and animals out in the fields!</p>
+            <p className="aboutText"> &nbsp; Our goats and hogs are rotated through our regenerating pastures to add more organic material to the soil and practice pig tillage on plots to be used for vegetable production the following year. We are incredibly visible from highway 184, just .9 miles from the stoplight in Mancos on the left. Look for the big blue bus (intern housing) and some hard working humans and animals out in the fields!</p>
 
             <h2 className="text-center">Where Are We Located?</h2>
             <MapContainer 
