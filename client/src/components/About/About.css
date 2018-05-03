@@ -4,6 +4,7 @@
 
 .facebook {
     overflow: scroll;
+    overflow-y: auto;
 }
 
 .noSidePadding {
