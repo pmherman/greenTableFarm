@@ -15,7 +15,16 @@
 
 .summary {
     font-family: agilis;
-    font-size: 2em;
-    padding-top: 10px;
-    text-align: center;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.smScreenOnly {
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    .smScreenOnly {
+        display: inline;
+    }
 }
