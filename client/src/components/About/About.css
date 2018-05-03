@@ -1,3 +1,11 @@
+@font-face {
+    font-family: agilis;
+    src: url("../font/Agilis.otf");
+}
+.aboutText {
+    text-align: center;
+}
+
 .googleMap {
     width: 100vw !important;
 }
@@ -13,8 +21,13 @@
     margin-right: 0px;
     margin-left: 0px;
 }
+@media (min-width: 992px) {
+    .aboutText {
+        text-align: left;
+    }
+}
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) {
     .small {
         margin-top: 15px;
         margin-left: auto;
