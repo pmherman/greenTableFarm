@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Carousel, Image } from 'react-bootstrap';
+import { Carousel, Image, Grid, Row } from 'react-bootstrap';
 import './Home.css';
 
 // Home Page
@@ -43,14 +43,16 @@ class Home extends Component {
           {/* Add more slides here, copy and paste a previous slide, then update the information */}
 
       </Carousel>
-        {/* <Grid> */}
-          {/* <Row> */}
+
+        {/*  Currently set to show max width 780px  */}
+        <Grid className="smScreenOnly">
+          <Row>
 
             {/* Optional Summary below the slides */}
 
-            {/* <p className="summary">Green Table Farm has much to offer, from hosting weddings, catering events, hosting campers, Farmer's Markets, and much more!</p> */}
-          {/* </Row> */}
-        {/* </Grid> */}
+            <p className="summary"> &nbsp; Green Table Farm is booking wedding and event dates for the upcoming season. Get married or host your event on a working farm/ranch in the scenic Mancos Valley. Farm to table catering is also available through Green Table Cafe. Prices are very reasonable this season, so dates are filling up fast. Book now to lock in your date at a magical place in the Southwest!</p>
+          </Row>
+        </Grid>
       </div>
     )
   }

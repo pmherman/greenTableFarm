@@ -38,7 +38,6 @@ nav {
 
 .navbar-right {
     margin-right: 0px;
-    margin-top: 20px;
 }
 
 .navbar-name {
@@ -125,7 +124,6 @@ nav {
   }
 
 
-/* at width: 516px add a media query for navbar-brand for width: 68vw */
 @media screen and (max-width: 930px) {
     .navbar-default .navbar-toggle {
         margin-right: 0px;
