@@ -25,6 +25,13 @@ p {
     background-color: transparent;
     color: black !important;
 }
+#editButton {
+    display: none;
+}
+
+#submitButton {
+    display: inline;
+}
 
 /* ----------------------- All Thumbnail Cards ----------------------- */
 .thumbnail {
@@ -42,6 +49,11 @@ p {
 
 .customTitle {
     font-size: 2.75em;
+}
+
+#price {
+    color: darkblue;
+    font-weight: bold;
 }
 
 @media (max-width: 750px) {

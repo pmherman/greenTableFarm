@@ -75,7 +75,7 @@ export default class AdminViewCafe extends Component {
       });
       this.loadCafes();
     })
-    .catch(err => console.log(err)); 
+    .catch(err => console.log(err));
   }
 
   handleFormSubmit = event => {

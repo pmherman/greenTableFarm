@@ -72,7 +72,7 @@ app.use(routes);
 app.use("/auth_routes", auth_routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/farmfresh");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/techcompany");
 mongoose.Promise = Promise;
 
 // Start the API server

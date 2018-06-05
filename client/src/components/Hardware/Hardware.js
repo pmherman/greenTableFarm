@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import "./Cafe.css";
+import "./Hardware.css";
 import { Grid, Row, Thumbnail, Col, ListGroup } from 'react-bootstrap';
 import API from "../../utils/API";
 
-class Cafe extends Component {
+class Hardware extends Component {
   state = {
     cafes: [],
     photo: "",
@@ -27,8 +27,8 @@ class Cafe extends Component {
     return (
       <Grid className="content">
         <br />
-        <img className="coverPhoto text-center" src="/assets/images/coverPhoto.jpg" alt="Kendra and Fairlight at Cafe" />
-        <h1 className="customTitle text-center">Café Menu</h1>
+        <img className="coverPhoto text-center" src="/assets/images/tech/hardware.jpg" alt="hardware logo" />
+        <h1 className="customTitle text-center">Hardware Selection</h1>
         <Row>
           {this.state.cafes.length ? (
               <ListGroup>
@@ -53,4 +53,4 @@ class Cafe extends Component {
   }
 }
 
-export default Cafe;
+export default Hardware;

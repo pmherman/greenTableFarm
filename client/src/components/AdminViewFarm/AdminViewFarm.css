@@ -11,11 +11,3 @@
     border: 1px solid black !important;
     border-image: none !important;
 }
-
-#editButton {
-    display: none;
-}
-
-#submitButton {
-    display: inline;
-}

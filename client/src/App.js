@@ -9,7 +9,7 @@ import AdminView from "./pages/AdminView";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/CustomNav";
 import Footer from "./components/Footer";
-import Cafe from "./components/Cafe";
+import Hardware from "./components/Hardware";
 import Contact from "./components/Contact";
 import Modal from 'react-modal';
 
@@ -105,7 +105,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={ Home } />
               <Route  path="/about" component={ About } />
-              <Route path="/cafe" component={ Cafe } />
+              <Route path="/hardware" component={ Hardware } />
               <Route  path="/farmfresh" component={ FarmFresh } />
               <Route path="/adminview" render={props => (
                 this.state.logged_in 

@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 // This file empties the FarmFresh collection and inserts the FarmFresh below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/farmfresh",
+  process.env.MONGODB_URI || "mongodb://localhost/techcompany",
   {
   }
 );

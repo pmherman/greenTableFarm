@@ -10,11 +10,3 @@
     height: 30em;
     overflow: scroll;
 }
-
-#editButton {
-    display: none;
-}
-
-#submitButton {
-    display: inline;
-}

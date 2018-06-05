@@ -29,10 +29,10 @@ export default class AdminView extends Component {
     return (
       <div>
         <Button onClick={this.displayFarm} className="select" id="adminfarmbutton">
-          Farm
+          Software
         </Button>
         <Button onClick={this.displayCafe} className="select" id="admincafebutton">
-          Café
+          Hardware
         </Button>
         <Button onClick={this.displayLogin} className="select" id="adminloginbutton">
           Manage users

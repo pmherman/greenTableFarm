@@ -29,7 +29,7 @@ small, .fa-coffee, .fa-heart {
     width: 100vw;
     /* --------------- */
     font-family: agilis;
-    background-color:rgba(15, 58, 14);
+    background-color:rgb(0, 17, 116);
     padding-top: 10px;
     color: white;
 }
@@ -40,7 +40,7 @@ small, .fa-coffee, .fa-heart {
 }
 
 .footer-copyright {
-    background-color:rgb(16, 44, 16);
+    background-color:rgb(1, 10, 65);
     padding: 15px 0;
     letter-spacing: 1px;
 }

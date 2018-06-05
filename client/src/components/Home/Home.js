@@ -15,7 +15,7 @@ class Home extends Component {
           {/* Update alt and src, carousel caption (optional) will overlay on top of the pictures */}
 
           {/* First Slide */}
-          <Image className="carouselPicture" alt="Kendra and Tyler" src="assets/images/portrait.jpg" />
+          <Image className="carouselPicture" alt="Image 1" src="assets/images/tech/wallpaper1.jpg" />
           {/* <Carousel.Caption>
             <h3>Welcome</h3>
             <p>Green Table Farm has much to offer, from hosting weddings, catering events, hosting campers, Farmer's Markets, and much more!</p>
@@ -24,7 +24,7 @@ class Home extends Component {
 
         {/* Second Slide */}
         <Carousel.Item>
-          <Image alt="Durango Farmers Market" src="assets/images/FarmersMarket.jpg" />
+          <Image alt="Demo2" src="assets/images/tech/wallpaper2.jpg" />
           {/* <Carousel.Caption>
             <h3>Come Visit at Durango Farmer's Market</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -33,7 +33,7 @@ class Home extends Component {
 
         {/* Third Slide */}
         <Carousel.Item>
-          <Image alt="Green Table Cafe Bus" src="assets/images/cafeBus.jpg" />
+          <Image alt="Demo3" src="assets/images/tech/wallpaper3.jpg" />
           {/* <Carousel.Caption>
             <h3>Green Table Cafe Bus</h3>
             <p>Visit "Cafe" to find out more about Green Table Cafe!</p>
